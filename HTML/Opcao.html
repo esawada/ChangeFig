@@ -10,9 +10,9 @@
     
     <div id="navlist">
         <a href="Feed.html">Change Fig</a>
-        <a href="About.html">About Us</a>
-        <a href="Contato.html">Contact Us</a>
-        <a href="Opcao.html">Preferencias</a>
+        <a href="About.html">Sobre Nós</a>
+        <a href="Contato.html">Contato</a>
+        <a href="Opcao.html">Configurações</a>
     </div>
      
 
@@ -20,19 +20,20 @@
         <div class="leftbox">
             <nav>
                 <a onclick="tabs(0)" class="tab active">
-                    <i class="fa fa-user"></i>
+                    
+                    <i class="fa fa-user" title="Informações Pessoais"></i>
                 </a>
                 <a onclick="tabs(1)" class="tab">
-                    <i class="fa fa-credit-card"></i>
+                    <i class="fa fa-clock-o " title="Hístorico"></i>
                 </a>
                 <a onclick="tabs(2)" class="tab">
-                    <i class="fa fa-comment-o"></i>
+                    <i class="fa fa-comment-o" title="Notificações"></i>
                 </a>
                 <a onclick="tabs(3)" class="tab">
-                    <i class="fa fa-lock"></i>
+                    <i class="fa fa-lock" title="Privacidade"></i>
                 </a>
                 <a onclick="tabs(4)" class="tab">
-                    <i class="fa fa-exclamation-circle"></i>
+                    <i class="fa fa-exclamation-circle"title="Termos e Políticas"></i>
                 </a>
             </nav>
         </div>
@@ -61,25 +62,19 @@
                 <button class="btn">Update</button>
             </div>
             <div class="payment tabShow">
-                <h1>Formas de Pagamentos Salvas</h1>
-                <h2>Opções de Pagamentos</h2>
+                <h1>Hístorico</h1>
+                <h2>Mostrar Hístorico até:</h2>
                 <form>
                     <select name="plataforma">
-                        <option value="cartao" >Cartão de Crédito/Debito</option>
-                        <option value="pix">Pix</option>
-                        <option value="boleto">Boleto</option>
-                        <option value="paypal">PayPal</option>
+                        <option value="cartao" >15 Dias</option>
+                        <option value="pix">30 Dias</option>
+                        <option value="boleto">6 Meses</option>
+                        <option value="paypal">Desde Sempre</option>
                     </select>
                 </form>
-                <h2>Estado</h2>
-                <input type="text" class="input" value="São Paulo">
-                <h2>Endereço</h2>
-                <input type="text" class="input" value="São Bernado">
-                <h2>CEP</h2>
-                <input type="text" class="input" value="06152-123">
-                <h2>Cartão Salvo</h2>
-                <input type="text" class="input" value="Visa - 1234-xxxx-0712">
-                <button class="btn">Update</button>
+                <br>
+                <h2>Nenhuma Visita Recente!</h2>
+                
             </div>
             <div class="subscription tabShow">
                 <h1>Notificações</h1>
@@ -164,15 +159,15 @@
             <div class="settings tabShow">
                 <h1>Termos e Politícas</h1>
                 <h2>Privacidade</h2>
-                <i class="fa fa-user-secret"><a href="Feed.html"> Politícas de Privacidade</a></i>
+                <i class="fa fa-user-secret"><a href="law.html"> Politícas de Privacidade</a></i>
                 <h2>Termos e serviços</h2>
-                <i class="fa fa-sticky-note"><a href="Feed.html"> Politícas de Termos e serviços</a></i>
+                <i class="fa fa-sticky-note"><a href="law.html"> Politícas de Termos e serviços</a></i>
                 <h2>Anúncios</h2>
-                <i class="fa fa-line-chart"><a href="Feed.html"> Politícas de Anúncios</a></i>
+                <i class="fa fa-line-chart"><a href="law.html"> Politícas de Anúncios</a></i>
                 <h2>Diretrizes</h2>
-                <i class="fa fa-lock"><a href="Feed.html"> Diretrizes da Comunidade</a></i>
+                <i class="fa fa-lock"><a href="law.html"> Diretrizes da Comunidade</a></i>
                 <h2>Pagamentos</h2>
-                <i class="fa fa-money"><a href="Feed.html"> Termos de Pagamaentos da Comunidade</a></i>
+                <i class="fa fa-money"><a href="law.html"> Termos de Pagamentos da Comunidade</a></i>
                 
         </div>
     </div>
