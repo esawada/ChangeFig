@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style_chat.css">
+        <title>Chat</title>
+    </head>
+    <body>
+        <div id="navlist">
+            <a href="Feed.html">Change Fig</a>
+            <a href="About.html">Sobre Nós</a>
+            <a href="Contato.html">Contato</a>
+            <a href="Opcao.html">Configurações</a>
+        </div>
+        <div class="wrapper">
+          <div class="container">
+            <div class="left">
+              <div class="top">
+                <input type="text" placeholder="Pesquisar" />
+                <a href="javascript:;" class="search"></a>
+              </div>
+              <ul class="people">
+                <li class="person" data-chat="person1">
+                  <img src="imgs/Homem_3.webp" alt="" />
+                  <span class="name">Eduardo</span>
+                  <span class="time">12:09 PM</span>
+                  <span class="preview">Disposta a vender?</span>
+                </li>
+                <li class="person" data-chat="person2">
+                  <img src="imgs/Homem_1.jpg" alt="" />
+                  <span class="name">Paulo Eduardo</span>
+                  <span class="time">17:44 PM</span>
+                  <span class="preview">O preço continua R$12,00 ainda?</span>
+                </li>
+                <li class="person" data-chat="person3">
+                  <img src="imgs/Homem_2.jpeg" alt="" />
+                  <span class="name">Gabriel Dias</span>
+                  <span class="time">7:09 AM</span>
+                  <span class="preview">Irei ver aqui e te aviso qualquer coisa</span>
+                </li>
+                <li class="person" data-chat="person4">
+                  <img src="imgs/Mulher_2.webp" alt="" />
+                  <span class="name">Maria Eduarda</span>
+                  <span class="time">2:09 PM</span>
+                  <span class="preview">Certinho, só um segundo!</span>
+                </li>
+                <li class="person" data-chat="person5">
+                  <img src="imgs/Mulher_3.webp" alt="" />
+                  <span class="name">Raissa Amor</span>
+                  <span class="time">2:09 PM</span>
+                  <span class="preview">Inicie uma conversa!</span>
+                </li>
+                <li class="person" data-chat="person6">
+                  <img src="imgs/Mulher_4.jpeg" alt="" />
+                  <span class="name">Isabela Cristina</span>
+                  <span class="time">17:44 PM</span>
+                  <span class="preview">Inicie uma conversa!</span>
+                </li>
+              </ul>
+            </div>
+            <div class="right">
+              <div class="top"><span>Para <span class="name">Eduardo</span></span></div>
+              <div class="chat" data-chat="person1">
+                <div class="conversation-start">
+                  <span>Hoje, 15h35</span>
+                </div>
+                <div class="bubble you">
+                  Olá
+                </div>
+                <div class="bubble you">
+                  Você ainda tem a figurinha do Neymar Bôrdo?
+                </div>
+                <div class="bubble you">
+                  Disposta a vender?
+                </div>
+              </div>
+              <div class="chat" data-chat="person2">
+                <div class="conversation-start">
+                  <span>Hoje, 19h47</span>
+                </div>
+                <div class="bubble you">
+                  Olá, Tudo Bem?
+                </div>
+                <div class="bubble you">
+                  Ainda está disponivél a figurinha do Mbappe??
+                </div>
+                <div class="bubble me">
+                  Olá!
+                </div>
+                <div class="bubble me">
+                  Sim, ainda estou com ela.
+                </div>
+                <div class="bubble me">
+                  Está interessado?
+                </div>
+                <div class="bubble you">
+                  Sim, por favor.
+                </div>
+                <div class="bubble you">
+                  O preço continua R$12,00 ainda?
+                </div>
+              </div>
+              <div class="chat" data-chat="person3">
+                <div class="conversation-start">
+                  <span>Ontem, 3:38 AM</span>
+                </div>
+                <div class="bubble you">
+                  Olá Isabella.
+                </div>
+                <div class="bubble you">
+                  As 4 figurinhas da seleção Brasileira, ainda estão com você??
+                </div>
+                <div class="bubble me">
+                  Sim.
+                </div>
+                <div class="bubble me">
+                  Porém elas estão em disputas.
+                </div>
+                <div class="bubble me">
+                  Muitas pessoas estão querendo, então o preço agora está em R$25,00.
+                </div>
+                <div class="bubble you">
+                  Hmmm ok.
+                </div>
+                <div class="bubble you">
+                  Irei ver aqui e te aviso qualquer coisa
+                </div>
+              </div>
+              <div class="chat" data-chat="person4">
+                <div class="conversation-start">
+                  <span>Dia 02, 4:20 PM</span>
+                </div>
+                <div class="bubble me">
+                  Boa Tarde Maria.
+                </div>
+                <div class="bubble me">
+                  A figurinha do Godin, ainda tem ela??
+                </div>
+                <div class="bubble you">
+                  Sim, ainda a tenho.
+                </div>
+                <div class="bubble you">
+                  Interessada??
+                </div>
+                <div class="bubble me">
+                  Sim, poderia passar as informações para comprá-la?
+                </div>
+                <div class="bubble you">
+                  Certinho, só um segundo!
+                </div>
+              </div>
+              <div class="chat" data-chat="person5">
+                <div class="conversation-start">
+                  <span>Inicie uma conversa!</span>
+                </div>
+                
+        
+              </div>
+              <div class="chat" data-chat="person6">
+                <div class="conversation-start">
+                  <span>Inicie uma conversa!</span>
+                </div>
+                
+              </div>
+              <div class="write">
+                <a href="javascript:;" class="write-link attach"></a>
+                <input type="text" />
+                <a href="javascript:;" class="write-link smiley"></a>
+                <a href="javascript:;" class="write-link send"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src ="script_chat.js"></script>
+    </body>
+</html>

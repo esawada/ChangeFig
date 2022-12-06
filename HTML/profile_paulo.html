@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Perfil</title>
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+        <link rel="stylesheet" href="style_prof2.css"/>
+    </head>
+
+    <body>
+        <div id="navlist">
+            <a href="Feed.html">Change Fig</a>
+            <a href="About.html">Sobre Nós</a>
+            <a href="Contato.html">Contato</a>
+            <a href="Opcao.html">Configurações</a>
+        </div>
+
+        <div class="header__wrapper">
+            <header></header>
+            <div class="cols__container">
+                <div class="left__col">
+                    <div class="img__container">
+                        <img src="imgs/Homem_1.jpg" alt="Anna Smith"/>
+                        <span></span>
+                    </div>
+                    <h2>Paulo Eduardo</h2>
+                    <p>Brsil</p>
+                    <p>paulo@gmail.com</p>
+                    <p>Entrou em: 08/09/2022</p>
+
+                    <ul class="about">
+                        <li>
+                            <span>3</span>Postagens</li>
+                        <li>
+                            <span>145</span>Seguidores</li>
+                        <li>
+                            <span>57</span>Curtidas</li>
+                    </ul>
+
+                    <div class="content">
+                        <p>
+                            Olá! Sou Paulo, tenho 27 anos, estou atrás de colecionar e completar o album da
+                            copa de 2022 o mais rápido possível!
+                        </p>
+
+                        <ul>
+                            <button id="meuBtn">Adicionar Amigo</button>
+                            <!-- The Modal -->
+                            <div id="meuModal" class="modais">
+
+                                <!-- Modal content -->
+                                <div class="modais-content">
+                                    <div class="modais-header">
+                                        <span class="closes">&times;</span>
+                                        <h2>Enviar Solicitação</h2>
+                                    </div>
+
+                                    <div class="modais-body">
+                                        <h3 style="color:blue;">Solicitação Enviada!</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <button id="myBtn">Denunciar Perfil</button>
+                            <!-- The Modal -->
+                            <div id="myModal" class="modal">
+
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <span class="close">&times;</span>
+                                        <h2>Denunciar Perfil</h2>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <p>Qual a razão da denúnica?</p>
+                                        <form>
+                                            <select name="plataforma">
+                                                <option value="">Selecione uma opção!</option>
+                                                <option value="">Fingindo Ser Outra Pessoa</option>
+                                                <option value="">Conta Fraudulenta</option>
+                                                <option value="">Discurso de ódio</option>
+                                                <option value="">Desrespeito</option>
+                                                <option value="">Hacker</option>
+                                            </select>
+                                        </form>
+                                        <button onclick="myFunction()">Denúnicar</button>
+                                        <h3 id="demo" style="color:blue"></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="mens">
+                                <a href="chat.html" style="color:black;">Enviar Mensagem</button>
+                            </a>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="right__col">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="">Ofertas</a>
+                            </li>
+                            <li>
+                                <a href="">Faltantes</a>
+                            </li>
+                            <li>
+                                <a href="">Curtidas</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="photos">
+                        <a href="#"><img src="imgs/promo_6.png" alt="Photo"/></a>
+                        <a href="#"><img src="imgs/promo_5.jpg" alt="Photo"/></a>
+                        <a href="#"><img src="imgs/Muller.png" alt="Photo"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script_prof_2.js"></script>
+        <script src="script_prof_2_1.js"></script>
+        <script>
+            function myFunction() {
+                document.getElementById("demo").innerHTML = "Perfil Denúnciado!";
+            }
+        </script>
+    </body>
+</html>

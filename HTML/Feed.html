@@ -1,438 +1,812 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        
-        <meta charset="UTF-8"/>
-        <title>Feed de Postagens</title>
-        <link href="style_fed.css" rel="stylesheet"><!--ARQUIVO css-->
-        <script type="text/javascript" src="js/app.js"></script><!--JavaScript-->
-        <meta name="viewport" content="width=device-width, initial-scale=1, background-color: rgb(243, 247, 252);"><!--ADAPTAÇÃO PARA DISPOSITIVOS-->
-    <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">  
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <!-- Bootstrap CSS -->
-    </head>
-    <!--PRIMEIRA PÁGINA (CABEÇALHO)-->
-    <body>
-          <nav class="navbar navbar-expand-lg navbar-light fixed-top"><!--LOGO DO FACEBOOK-->
-            <a class="navbar-brand" href="#">
-              <p>CHANGE FIG</p>
-            </a>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav">
-                <li class="nav-item div-pesquisar active"><!--INPUT Pesquisar-->
-                  <label class="form-control pesquisar mr-sm-2"><span class=""><svg viewBox="0 0 16 16" width="1em" height="1em"><g fill-rule="evenodd" transform="translate(-448 -544)"><g fill-rule="nonzero"><path d="M10.743 2.257a6 6 0 1 1-8.485 8.486 6 6 0 0 1 8.485-8.486zm-1.06 1.06a4.5 4.5 0 1 0-6.365 6.364 4.5 4.5 0 0 0 6.364-6.363z" transform="translate(448 544)"></path><path d="M10.39 8.75a2.94 2.94 0 0 0-.199.432c-.155.417-.23.849-.172 1.284.055.415.232.794.54 1.103a.75.75 0 0 0 1.112-1.004l-.051-.057a.39.39 0 0 1-.114-.24c-.021-.155.014-.356.09-.563.031-.081.06-.145.08-.182l.012-.022a.75.75 0 1 0-1.299-.752z" transform="translate(448 544)"></path><path d="M9.557 11.659c.038-.018.09-.04.15-.064.207-.077.408-.112.562-.092.08.01.143.034.198.077l.041.036a.75.75 0 0 0 1.06-1.06 1.881 1.881 0 0 0-1.103-.54c-.435-.058-.867.018-1.284.175-.189.07-.336.143-.433.2a.75.75 0 0 0 .624 1.356l.066-.027.12-.061z" transform="translate(448 544)"></path><path d="m13.463 15.142-.04-.044-3.574-4.192c-.599-.703.355-1.656 1.058-1.057l4.191 3.574.044.04c.058.059.122.137.182.24.249.425.249.96-.154 1.41l-.057.057c-.45.403-.986.403-1.411.154a1.182 1.182 0 0 1-.24-.182zm.617-.616.444-.444a.31.31 0 0 0-.063-.052c-.093-.055-.263-.055-.35.024l.208.232.207-.206.006.007-.22.257-.026-.024.033-.034.025.027-.257.22-.007-.007zm-.027-.415c-.078.088-.078.257-.023.35a.31.31 0 0 0 .051.063l.205-.204-.233-.209z" transform="translate(448 544)"></path></g></g></svg></span><input type="search" class="input-pesquisar" dir="ltr" aria-autocomplete="list" aria-expanded="false" aria-label="Pesquisar no Change Fig" role="combobox" placeholder="Pesquisar no Change Fig" autocomplete="off" spellcheck="false" aria-invalid="false" value="" class=""></label><!--INPUT PRA PESQUISAR-->
-                </li>
-              </ul>
-              
-              <ul class="nav nav-menu justify-content-center">
-                <li class="nav-item nav-item-centro link-logo-ativo-linha" data-toggle="tooltip" data-html="true" title="Página Principal">
-                  <a class="nav-link link-logo-ativo" href="#"><!--LOGO HOME-->
-                      <svg viewBox="0 0 28 28" height="28" width="400"><path class="link-logo-ativo" d="M25.825 12.29C25.824 12.289 25.823 12.288 25.821 12.286L15.027 2.937C14.752 2.675 14.392 2.527 13.989 2.521 13.608 2.527 13.248 2.675 13.001 2.912L2.175 12.29C1.756 12.658 1.629 13.245 1.868 13.759 2.079 14.215 2.567 14.479 3.069 14.479L5 14.479 5 23.729C5 24.695 5.784 25.479 6.75 25.479L11 25.479C11.552 25.479 12 25.031 12 24.479L12 18.309C12 18.126 12.148 17.979 12.33 17.979L15.67 17.979C15.852 17.979 16 18.126 16 18.309L16 24.479C16 25.031 16.448 25.479 17 25.479L21.25 25.479C22.217 25.479 23 24.695 23 23.729L23 14.479 24.931 14.479C25.433 14.479 25.921 14.215 26.132 13.759 26.371 13.245 26.244 12.658 25.825 12.29"></path></svg>
-                  </a>
-                </li>
-              </ul>
-
-            </div><!--MENU A DIREITA-->
-              <div class="ml-auto form-inline my-2 pr-2 my-lg-0">
-                <div class="link-conta">
-                  <img class="img-conta mr-1" src="imgs/user.jpeg" ><a href="profile.html" style="color:white ;">Isabella Sanches <br> </a> 
-                </div>
-
-                <div class="div-circulo-menu" data-toggle="tooltip" data-html="true" title="Preferencias"><!--LNK MENU-->
-                  <a href="Opcao.html" style="color:white;"><i class="fa fa-cog"></i></a> 
-                </div>
-                
-                <div class="div-circulo-menu" data-toggle="tooltip" data-html="true" title="Contatos"><!--LNK NOTIFICAÇÃO-->
-                  <a href="Contato.html" style="color:white;"><i class="fa fa-phone"></i></a> 
-                </div>
-
-                <div class="div-circulo-menu" data-toggle="tooltip" data-html="true" title="Sobre"><!--LNK NOTIFICAÇÃO-->
-                  <a href="About.html" style="color:white"><i class="fa fa-exclamation-circle"></i></a>
-              </div>
-                
-              </div>
-          </nav>
-          <main>
-
-            <div class="menu-esquerda">
-              <ul class="nav nav-pagina" ><!--Menu conta-->
-                <li class="nav-item nav-item-esquerda link-hover"><p class="nome-conta"><img class="img-conta1" src="imgs/user.jpeg" style="color:white ;"><a href="profile.html"> Isabella Sanches</a></p></li>
-              </ul>
-              <ul class="nav nav-esquerda">
-                <li class="nav-item nav-item-esquerda link-hover"><!--Amigos-->
-                  <p class="#"><img src="imgs/falta.png" style="height:36px;width:36px" alt="" > 
-                  Figurinhas Faltantes</p>
-
-                </li>
-                
-                <li class="nav-item nav-item-esquerda link-hover">
-                    <p style="margin-left:50px"> • 15 - França</p>
-                </li>
-
-                <li class="nav-item nav-item-esquerda link-hover"><!--Grupos-->
-                    <p style="margin-left:50px" > • 01 - Brasil</p>
-                </li>
-
-                <li class="nav-item nav-item-esquerda link-hover"><!--watch-->
-                  <p style="margin-left:50px"> • 22 - Argentina</p>
-                <li class="nav-item nav-item-esquerda link-hover"><!--watch-->
-
-                <li class="nav-item nav-item-esquerda link-hover"><!--watch-->
-                    <p style="margin-left:50px"> • 02 - Alemanha</p>
-                <li class="nav-item nav-item-esquerda link-hover"><!--watch-->
-                  
-                <li class="nav-item nav-item-esquerda link-hover"><!--watch-->
-                    <p style="margin-left:50px"> • 10 - Polonia</p>
-                <li class="nav-item nav-item-esquerda link-hover"><!--watch-->
-                </li>
-
-                <!--DENTRO DO BOTAO VER MAIS-->
-                <div class="collapse" id="collapseExample">
-
-                  <li class="nav-item nav-item-esquerda link-hover">
-                    <p style="margin-left:50px"> • 13 - Catar</p>
-                  <li class="nav-item nav-item-esquerda link-hover">
-
-                  <li class="nav-item nav-item-esquerda link-hover">
-                    <p style="margin-left:50px"> • 18 - Senegal</p>
-                  <li class="nav-item nav-item-esquerda link-hover">
-
-                  <li class="nav-item nav-item-esquerda link-hover">
-                    <p style="margin-left:50px"> • 02 - Estados Unidos</p>
-                  <li class="nav-item nav-item-esquerda link-hover">
-
-                  <li class="nav-item nav-item-esquerda link-hover">
-                    <p style="margin-left:50px"> • 21 - Inglaterra</p>
-                  <li class="nav-item nav-item-esquerda link-hover">
-
-                 <li class="nav-item nav-item-esquerda ">
-                    <p style="margin-left:50px"> • 05 - Argentina</p>
-                 <li class="nav-item nav-item-esquerda link-hover">
-
-                 <li class="nav-item nav-item-esquerda link-hover">
-                    <p style="margin-left:50px"> • 18 Gales</p>
-                 <li class="nav-item nav-item-esquerda link-hover">
-
-                 <li class="nav-item nav-item-esquerda link-hover">
-                    <p style="margin-left:50px"> • 21 Holanda</p>
-                 <li class="nav-item nav-item-esquerda link-hover">
-
-                 <li class="nav-item nav-item-esquerda link-hover">
-                    <p style="margin-left:50px"> • 22 - Equador</p>
-                 <li class="nav-item nav-item-esquerda link-hover">
-                </div>
-
-                <!--DENTRO DO BOTAO VER MAIS-->
-
-                <li class="nav-item nav-item-esquerda link-hover" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><!--watch-->
-                  <p class="nome-conta">
-                    <span class="div-circulo-ver-mais">
-                      <svg viewBox="0 0 16 16" width="1em" height="1em" class=""><g fill-rule="evenodd" transform="translate(-448 -544)"><path fill-rule="nonzero" d="M452.707 549.293a1 1 0 0 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L456 552.586l-3.293-3.293z"></path></g></svg>
-                    </span>
-                      Ver mais</p>
-                </li>
-              </ul>
+<head>
+  <meta charset="UTF-8" />
   
-            <p class="div-link-menu">
-              <a href="About.html" class="link-menu">About</a> · <a href="#" class="link-menu">Configurações</a> · <a href="Contato.html" class="link-menu">Contato</a> ·  <a href="#" class="link-menu">Change Fig © 2022</a> 
-            </p>
-            </div>
+  <title>Feed de Postagens</title>
+  <link href="style_fed.css" rel="stylesheet">
+  <!--ARQUIVO css-->
+  <script type="text/javascript" src="js/app.js"></script>
+  <!--JavaScript-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, background-color: rgb(243, 247, 252);">
+  <!--ADAPTAÇÃO PARA DISPOSITIVOS-->
+  <!-- Bootstrap CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap CSS -->
+</head>
+<!--PRIMEIRA PÁGINA (CABEÇALHO)-->
+
+<body>
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top">
+    <!--LOGO DO FACEBOOK-->
+    <a class="navbar-brand" href="#">
+      <p>CHANGE FIG</p>
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item div-pesquisar active">
+          <!--INPUT Pesquisar-->
+          <label class="form-control pesquisar mr-sm-2"><span class=""><svg viewBox="0 0 16 16" width="1em"
+                height="1em">
+                <g fill-rule="evenodd" transform="translate(-448 -544)">
+                  <g fill-rule="nonzero">
+                    <path
+                      d="M10.743 2.257a6 6 0 1 1-8.485 8.486 6 6 0 0 1 8.485-8.486zm-1.06 1.06a4.5 4.5 0 1 0-6.365 6.364 4.5 4.5 0 0 0 6.364-6.363z"
+                      transform="translate(448 544)"></path>
+                    <path
+                      d="M10.39 8.75a2.94 2.94 0 0 0-.199.432c-.155.417-.23.849-.172 1.284.055.415.232.794.54 1.103a.75.75 0 0 0 1.112-1.004l-.051-.057a.39.39 0 0 1-.114-.24c-.021-.155.014-.356.09-.563.031-.081.06-.145.08-.182l.012-.022a.75.75 0 1 0-1.299-.752z"
+                      transform="translate(448 544)"></path>
+                    <path
+                      d="M9.557 11.659c.038-.018.09-.04.15-.064.207-.077.408-.112.562-.092.08.01.143.034.198.077l.041.036a.75.75 0 0 0 1.06-1.06 1.881 1.881 0 0 0-1.103-.54c-.435-.058-.867.018-1.284.175-.189.07-.336.143-.433.2a.75.75 0 0 0 .624 1.356l.066-.027.12-.061z"
+                      transform="translate(448 544)"></path>
+                    <path
+                      d="m13.463 15.142-.04-.044-3.574-4.192c-.599-.703.355-1.656 1.058-1.057l4.191 3.574.044.04c.058.059.122.137.182.24.249.425.249.96-.154 1.41l-.057.057c-.45.403-.986.403-1.411.154a1.182 1.182 0 0 1-.24-.182zm.617-.616.444-.444a.31.31 0 0 0-.063-.052c-.093-.055-.263-.055-.35.024l.208.232.207-.206.006.007-.22.257-.026-.024.033-.034.025.027-.257.22-.007-.007zm-.027-.415c-.078.088-.078.257-.023.35a.31.31 0 0 0 .051.063l.205-.204-.233-.209z"
+                      transform="translate(448 544)"></path>
+                  </g>
+                </g>
+              </svg></span><input type="search" class="input-pesquisar" dir="ltr" aria-autocomplete="list"
+              aria-expanded="false" aria-label="Pesquisar no Change Fig" role="combobox"
+              placeholder="Pesquisar no Change Fig" autocomplete="off" spellcheck="false" aria-invalid="false" value=""
+              class=""></label>
+          <!--INPUT PRA PESQUISAR-->
+        </li>
+      </ul>
+
+      <ul class="nav nav-menu justify-content-center">
+        <li class="nav-item nav-item-centro link-logo-ativo-linha" data-toggle="tooltip" data-html="true"
+          title="Página Principal">
+          <a class="nav-link link-logo-ativo" href="#">
+            <!--LOGO HOME-->
+            <svg viewBox="10 0 28 28" height="28" width="400">
+              <path class="link-logo-ativo"
+                d="M25.825 12.29C25.824 12.289 25.823 12.288 25.821 12.286L15.027 2.937C14.752 2.675 14.392 2.527 13.989 2.521 13.608 2.527 13.248 2.675 13.001 2.912L2.175 12.29C1.756 12.658 1.629 13.245 1.868 13.759 2.079 14.215 2.567 14.479 3.069 14.479L5 14.479 5 23.729C5 24.695 5.784 25.479 6.75 25.479L11 25.479C11.552 25.479 12 25.031 12 24.479L12 18.309C12 18.126 12.148 17.979 12.33 17.979L15.67 17.979C15.852 17.979 16 18.126 16 18.309L16 24.479C16 25.031 16.448 25.479 17 25.479L21.25 25.479C22.217 25.479 23 24.695 23 23.729L23 14.479 24.931 14.479C25.433 14.479 25.921 14.215 26.132 13.759 26.371 13.245 26.244 12.658 25.825 12.29">
+              </path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+    <!--MENU A DIREITA-->
+    <div class="ml-auto form-inline my-2 pr-2 my-lg-0">
+      <div class="link-conta">
+        <img class="img-conta mr-1" src="imgs/user.jpeg"><a href="profile.html" style="color:white ;">Isabella Sanches
+          <br> </a>
+      </div>
+
+      <div class="div-circulo-menu" data-toggle="tooltip" data-html="true" title="Configurações">
+        <!--LNK MENU-->
+        <a href="Opcao.html" style="color:white;"><i class="fa fa-cog"></i></a>
+      </div>
+
+      <div class="div-circulo-menu" data-toggle="tooltip" data-html="true" title="Contatos">
+        <!--LNK NOTIFICAÇÃO-->
+        <a href="Contato.html" style="color:white;"><i class="fa fa-phone"></i></a>
+      </div>
+
+      <div class="div-circulo-menu" data-toggle="tooltip" data-html="true" title="Sobre">
+        <!--LNK NOTIFICAÇÃO-->
+        <a href="About.html" style="color:white"><i class="fa fa-exclamation-circle"></i></a>
+      </div>
+
+    </div>
+  </nav>
+  <main>
+
+    <div class="menu-esquerda d-none d-xl-block">
+      <ul class="nav nav-pagina">
+        <!--Menu conta-->
+        <li class="nav-item nav-item-esquerda link-hover">
+          <p class="nome-conta"><img class="img-conta1" src="imgs/user.jpeg" style="color:white ;"><a
+              href="profile.html"> Isabella Sanches</a></p>
+        </li>
+      </ul>
+      <ul class="nav nav-esquerda">
+        <li class="nav-item nav-item-esquerda link-hover">
+          <!--Amigos-->
+          <p class="#"><img src="imgs/falta.png" style="height:36px;width:36px" alt="">
+            Figurinhas Faltantes</p>
+
+        </li>
+
+        <li class="nav-item nav-item-esquerda link-hover">
+          <p style="margin-left:50px"> • 15 - França</p>
+        </li>
+
+        <li class="nav-item nav-item-esquerda link-hover">
+          <!--Grupos-->
+          <p style="margin-left:50px"> • 01 - Brasil</p>
+        </li>
+
+        <li class="nav-item nav-item-esquerda link-hover">
+          <!--watch-->
+          <p style="margin-left:50px"> • 22 - Argentina</p>
+        <li class="nav-item nav-item-esquerda link-hover">
+          <!--watch-->
+
+        <li class="nav-item nav-item-esquerda link-hover">
+          <!--watch-->
+          <p style="margin-left:50px"> • 02 - Alemanha</p>
+        <li class="nav-item nav-item-esquerda link-hover">
+          <!--watch-->
+
+        <li class="nav-item nav-item-esquerda link-hover">
+          <!--watch-->
+          <p style="margin-left:50px"> • 10 - Polonia</p>
+        <li class="nav-item nav-item-esquerda link-hover">
+          <!--watch-->
+        </li>
+
+        <!--DENTRO DO BOTAO VER MAIS-->
+        <div class="collapse" id="collapseExample">
+
+          <li class="nav-item nav-item-esquerda link-hover">
+            <p style="margin-left:50px"> • 13 - Catar</p>
+          <li class="nav-item nav-item-esquerda link-hover">
+
+          <li class="nav-item nav-item-esquerda link-hover">
+            <p style="margin-left:50px"> • 18 - Senegal</p>
+          <li class="nav-item nav-item-esquerda link-hover">
+
+          <li class="nav-item nav-item-esquerda link-hover">
+            <p style="margin-left:50px"> • 02 - Estados Unidos</p>
+          <li class="nav-item nav-item-esquerda link-hover">
+
+          <li class="nav-item nav-item-esquerda link-hover">
+            <p style="margin-left:50px"> • 21 - Inglaterra</p>
+          <li class="nav-item nav-item-esquerda link-hover">
+
+          <li class="nav-item nav-item-esquerda ">
+            <p style="margin-left:50px"> • 05 - Argentina</p>
+          <li class="nav-item nav-item-esquerda link-hover">
+
+          <li class="nav-item nav-item-esquerda link-hover">
+            <p style="margin-left:50px"> • 18 Gales</p>
+          <li class="nav-item nav-item-esquerda link-hover">
+
+          <li class="nav-item nav-item-esquerda link-hover">
+            <p style="margin-left:50px"> • 21 Holanda</p>
+          <li class="nav-item nav-item-esquerda link-hover">
+
+          <li class="nav-item nav-item-esquerda link-hover">
+            <p style="margin-left:50px"> • 22 - Equador</p>
+          <li class="nav-item nav-item-esquerda link-hover">
+        </div>
+
+        <!--DENTRO DO BOTAO VER MAIS-->
+
+        <li class="nav-item nav-item-esquerda link-hover" data-toggle="collapse" href="#collapseExample" role="button"
+          aria-expanded="false" aria-controls="collapseExample">
+          <!--watch-->
+          <p class="nome-conta">
+            <span class="div-circulo-ver-mais">
+              <svg viewBox="0 0 16 16" width="1em" height="1em" class="">
+                <g fill-rule="evenodd" transform="translate(-448 -544)">
+                  <path fill-rule="nonzero"
+                    d="M452.707 549.293a1 1 0 0 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L456 552.586l-3.293-3.293z">
+                  </path>
+                </g>
+              </svg>
+            </span>
+            ⠀Ver mais
+          </p>
+        </li>
+      </ul>
+
+      <p class="div-link-menu">
+        <a href="About.html" class="link-menu">Sobre Nós</a> · <a href="#" class="link-menu">Configurações</a> · <a
+          href="Contato.html" class="link-menu">Contato</a> · <a href="#" class="link-menu">Change Fig © 2022</a>
+      </p>
+    </div>
 
 
-            <div class="menu-direita">
-              <h6 style="color: #ccc;">Anúncios</h6>
-            <img class="img-patrocinado mt-2" src="imgs/promo.webp" ><a href="https://panini.com.br">
-              • PANINI - 30% OFF</a>
-              <div class="sua-pagina">
-              </div>
-              
-              <div class="contatos">
-                <div class="menu-publicacao" style="margin: 0; padding: 0;  ">
-                  <div class="criar-sala">
-                    <svg viewBox="0 0 16 16" width="1em" height="1em" class="ml-2"><g fill-rule="evenodd" transform="translate(-448 -544)"><path d="M457.25 552.5H455v2.25a.75.75 0 0 1-1.5 0v-2.25h-2.25a.75.75 0 0 1 0-1.5h2.25v-2.25a.75.75 0 0 1 1.5 0V551h2.25a.75.75 0 0 1 0 1.5m6.38-4.435a.62.62 0 0 0-.64.047l-2.49 1.634v-1.394a1.854 1.854 0 0 0-1.852-1.852l-8.796.002a1.854 1.854 0 0 0-1.851 1.852v6.793c0 1.021.83 1.852 1.852 1.852l1.147-.002h7.648a1.854 1.854 0 0 0 1.852-1.851v-1.392l2.457 1.61a.641.641 0 0 0 .673.071.663.663 0 0 0 .37-.601v-6.167c0-.26-.142-.49-.37-.602"></path></g></svg>
-                  </div>
-                  <div class="pesquisar-pessoa">
-                    <svg viewBox="0 0 16 16" width="1em" height="1em" class="ml-2"><g fill-rule="evenodd" transform="translate(-448 -544)"><g fill-rule="nonzero"><path d="M10.743 2.257a6 6 0 1 1-8.485 8.486 6 6 0 0 1 8.485-8.486zm-1.06 1.06a4.5 4.5 0 1 0-6.365 6.364 4.5 4.5 0 0 0 6.364-6.363z" transform="translate(448 544)"></path><path d="M10.39 8.75a2.94 2.94 0 0 0-.199.432c-.155.417-.23.849-.172 1.284.055.415.232.794.54 1.103a.75.75 0 0 0 1.112-1.004l-.051-.057a.39.39 0 0 1-.114-.24c-.021-.155.014-.356.09-.563.031-.081.06-.145.08-.182l.012-.022a.75.75 0 1 0-1.299-.752z" transform="translate(448 544)"></path><path d="M9.557 11.659c.038-.018.09-.04.15-.064.207-.077.408-.112.562-.092.08.01.143.034.198.077l.041.036a.75.75 0 0 0 1.06-1.06 1.881 1.881 0 0 0-1.103-.54c-.435-.058-.867.018-1.284.175-.189.07-.336.143-.433.2a.75.75 0 0 0 .624 1.356l.066-.027.12-.061z" transform="translate(448 544)"></path><path d="m13.463 15.142-.04-.044-3.574-4.192c-.599-.703.355-1.656 1.058-1.057l4.191 3.574.044.04c.058.059.122.137.182.24.249.425.249.96-.154 1.41l-.057.057c-.45.403-.986.403-1.411.154a1.182 1.182 0 0 1-.24-.182zm.617-.616.444-.444a.31.31 0 0 0-.063-.052c-.093-.055-.263-.055-.35.024l.208.232.207-.206.006.007-.22.257-.026-.024.033-.034.025.027-.257.22-.007-.007zm-.027-.415c-.078.088-.078.257-.023.35a.31.31 0 0 0 .051.063l.205-.204-.233-.209z" transform="translate(448 544)"></path></g></g></svg>
-                  </div>
-                  <div class="opcoes">
-                    <svg viewBox="0 0 20 20" width="1em" height="1em" class="ml-2"><g fill-rule="evenodd" transform="translate(-446 -350)"><path d="M458 360a2 2 0 1 1-4 0 2 2 0 0 1 4 0m6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0m-12 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0"></path></g></svg>
-                  </div>
-                </div>
-                <h6 style="color: #ccc;">Amigos</h6>
-                <ul class="nav nav-pagina" ><!--Menu conta-->
-                  <li class="nav-item link-hover"><p class="nome-conta"><img class="img-conta1" src="imgs/Homem_1.jpg"> Paulo Eduardo</p></li>
-                </ul>
-                <ul class="nav nav-pagina" ><!--Menu conta-->
-                  <li class="nav-item link-hover"><p class="nome-conta"><img class="img-conta1" src="imgs/Homem_2.jpeg"> Gabriel Dias </p></li>
-                </ul>
-                <ul class="nav nav-pagina" ><!--Menu conta-->
-                  <li class="nav-item link-hover"><p class="nome-conta"><img class="img-conta1" src="imgs/Homem_3.webp"> Eduardo </p></li>
-                </ul>
-                <ul class="nav nav-pagina" ><!--Menu conta-->
-                  <li class="nav-item link-hover"><p class="nome-conta"><img class="img-conta1" src="imgs/Mulher_1.webp"> Isabela Cristina</p></li>
-                </ul>
-                <ul class="nav nav-pagina" ><!--Menu conta-->
-                  <li class="nav-item link-hover"><p class="nome-conta"><img class="img-conta1" src="imgs/Mulher_2.webp"> Maria Eduarda</p></li>
-                </ul>
-                <ul class="nav nav-pagina" ><!--Menu conta-->
-                  <li class="nav-item link-hover"><p class="nome-conta"><img class="img-conta1" src="imgs/Mulher_3.webp"> Raissa Amor</p></li>
-                </ul>
-                <ul class="nav nav-pagina" ><!--Menu conta-->
-                  <li class="nav-item link-hover"><p class="nome-conta"><img class="img-conta1" src="imgs/Mulher_4.jpeg"> Isabela Cristina</p></li>
-                </ul>
-              </div>
-            </div>
+    <div class="menu-direita d-none d-xl-block">
+      <h6 style="color: #ccc;">Anúncios</h6>
+      <img class="img-patrocinado mt-2" src="imgs/promo.webp"><a href="https://panini.com.br">
+        • PANINI - 30% OFF</a>
+      <div class="sua-pagina">
+      </div>
+
+      <div class="contatos">
+        <div class="menu-publicacao" style="margin: 0; padding: 0;  ">
+          <div class="criar-sala">
+            <svg viewBox="0 0 16 16" width="1em" height="1em" class="ml-2">
+              <g fill-rule="evenodd" transform="translate(-448 -544)">
+                <path
+                  d="M457.25 552.5H455v2.25a.75.75 0 0 1-1.5 0v-2.25h-2.25a.75.75 0 0 1 0-1.5h2.25v-2.25a.75.75 0 0 1 1.5 0V551h2.25a.75.75 0 0 1 0 1.5m6.38-4.435a.62.62 0 0 0-.64.047l-2.49 1.634v-1.394a1.854 1.854 0 0 0-1.852-1.852l-8.796.002a1.854 1.854 0 0 0-1.851 1.852v6.793c0 1.021.83 1.852 1.852 1.852l1.147-.002h7.648a1.854 1.854 0 0 0 1.852-1.851v-1.392l2.457 1.61a.641.641 0 0 0 .673.071.663.663 0 0 0 .37-.601v-6.167c0-.26-.142-.49-.37-.602">
+                </path>
+              </g>
+            </svg>
+          </div>
+          <div class="pesquisar-pessoa">
+            <svg viewBox="0 0 16 16" width="1em" height="1em" class="ml-2">
+              <g fill-rule="evenodd" transform="translate(-448 -544)">
+                <g fill-rule="nonzero">
+                  <path
+                    d="M10.743 2.257a6 6 0 1 1-8.485 8.486 6 6 0 0 1 8.485-8.486zm-1.06 1.06a4.5 4.5 0 1 0-6.365 6.364 4.5 4.5 0 0 0 6.364-6.363z"
+                    transform="translate(448 544)"></path>
+                  <path
+                    d="M10.39 8.75a2.94 2.94 0 0 0-.199.432c-.155.417-.23.849-.172 1.284.055.415.232.794.54 1.103a.75.75 0 0 0 1.112-1.004l-.051-.057a.39.39 0 0 1-.114-.24c-.021-.155.014-.356.09-.563.031-.081.06-.145.08-.182l.012-.022a.75.75 0 1 0-1.299-.752z"
+                    transform="translate(448 544)"></path>
+                  <path
+                    d="M9.557 11.659c.038-.018.09-.04.15-.064.207-.077.408-.112.562-.092.08.01.143.034.198.077l.041.036a.75.75 0 0 0 1.06-1.06 1.881 1.881 0 0 0-1.103-.54c-.435-.058-.867.018-1.284.175-.189.07-.336.143-.433.2a.75.75 0 0 0 .624 1.356l.066-.027.12-.061z"
+                    transform="translate(448 544)"></path>
+                  <path
+                    d="m13.463 15.142-.04-.044-3.574-4.192c-.599-.703.355-1.656 1.058-1.057l4.191 3.574.044.04c.058.059.122.137.182.24.249.425.249.96-.154 1.41l-.057.057c-.45.403-.986.403-1.411.154a1.182 1.182 0 0 1-.24-.182zm.617-.616.444-.444a.31.31 0 0 0-.063-.052c-.093-.055-.263-.055-.35.024l.208.232.207-.206.006.007-.22.257-.026-.024.033-.034.025.027-.257.22-.007-.007zm-.027-.415c-.078.088-.078.257-.023.35a.31.31 0 0 0 .051.063l.205-.204-.233-.209z"
+                    transform="translate(448 544)"></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="opcoes">
+            <svg viewBox="0 0 20 20" width="1em" height="1em" class="ml-2">
+              <g fill-rule="evenodd" transform="translate(-446 -350)">
+                <path
+                  d="M458 360a2 2 0 1 1-4 0 2 2 0 0 1 4 0m6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0m-12 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0">
+                </path>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <h6 style="color: #ccc;">Amigos</h6>
+        <ul class="nav nav-pagina">
+          <!--Menu conta-->
+          <li class="nav-item link-hover">
+            <p class="nome-conta"><img class="img-conta1" src="imgs/Homem_1.jpg"><a href="profile_paulo.html"> Paulo Eduardo</p></a>
+          </li>
+        </ul>
+        <ul class="nav nav-pagina">
+          <!--Menu conta-->
+          <li class="nav-item link-hover">
+            <p class="nome-conta"><img class="img-conta1" src="imgs/Homem_2.jpeg"><a href="#"> Gabriel Dias </p></a>
+          </li>
+        </ul>
+        <ul class="nav nav-pagina">
+          <!--Menu conta-->
+          <li class="nav-item link-hover">
+            <p class="nome-conta"><img class="img-conta1" src="imgs/Homem_3.webp"><a href="#"> Eduardo </p></a>
+          </li>
+        </ul>
+        <ul class="nav nav-pagina">
+          <!--Menu conta-->
+          <li class="nav-item link-hover">
+            <p class="nome-conta"><img class="img-conta1" src="imgs/Mulher_1.webp"><a href="#"> Isabela Cristina</p></a>
+          </li>
+        </ul>
+        <ul class="nav nav-pagina">
+          <!--Menu conta-->
+          <li class="nav-item link-hover">
+            <p class="nome-conta"><img class="img-conta1" src="imgs/Mulher_2.webp"><a href="#"> Maria Eduarda</p></a>
+          </li>
+        </ul>
+        <ul class="nav nav-pagina">
+          <!--Menu conta-->
+          <li class="nav-item link-hover">
+            <p class="nome-conta"><img class="img-conta1" src="imgs/Mulher_3.webp"><a href="#">Raissa Amor</p></a>
+          </li>
+        </ul>
+        <ul class="nav nav-pagina">
+          <!--Menu conta-->
+          <li class="nav-item link-hover">
+            <p class="nome-conta"><img class="img-conta1" src="imgs/Mulher_4.jpeg"><a href="#">Isabela Cristina</p></a>
+          </li>
+        </ul>
+        <ul class="nav nav-pagina">
+          <!--Menu conta-->
+          <li class="nav-item link-hover">
+            <p class="nome-conta"><img class="img-conta1" src="imgs/Homem_1.jpg"><a href="profile_paulo.html"> Paulo Eduardo</p></a>
+          </li>
+        </ul>
+        <ul class="nav nav-pagina">
+          <!--Menu conta-->
+          <li class="nav-item link-hover">
+            <p class="nome-conta"><img class="img-conta1" src="imgs/Homem_2.jpeg"><a href="#"> Gabriel Dias </p></a>
+          </li>
+        </ul>
+        <ul class="nav nav-pagina">
+          <!--Menu conta-->
+          <li class="nav-item link-hover">
+            <p class="nome-conta"><img class="img-conta1" src="imgs/Homem_3.webp"><a href="#"> Eduardo</p></a>
+          </li>
+        </ul>
+        <ul class="nav nav-pagina">
+          <!--Menu conta-->
+          <li class="nav-item link-hover">
+            <p class="nome-conta"><img class="img-conta1" src="imgs/Mulher_1.webp"><a href="#"> Isabela Cristina</p></a>
+          </li>
+        </ul>
+        <ul class="nav nav-pagina">
+          <!--Menu conta-->
+          <li class="nav-item link-hover">
+            <p class="nome-conta"><img class="img-conta1" src="imgs/Mulher_2.webp"><a href="#"> Maria Eduarda</p></a>
+          </li>
+        </ul>
+        <ul class="nav nav-pagina">
+          <!--Menu conta-->
+          <li class="nav-item link-hover">
+            <p class="nome-conta"><img class="img-conta1" src="imgs/Mulher_3.webp"><a href="#"> Raissa Amor</p></a>
+          </li>
+        </ul>
+        <ul class="nav nav-pagina">
+          <!--Menu conta-->
+          <li class="nav-item link-hover">
+            <p class="nome-conta"><img class="img-conta1" src="imgs/Mulher_4.jpeg"><a href="#"> Isabela Cristina</p></a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <div class="alinhar-centro">
-            <div class="card-group">
-              <div class="card">
-                <div class="img-card" style="background-image: url('');">
-                  <button class="criar-story"><svg viewBox="0 0 20 20" width="1em" height="1em" class="a8c37x1j ms05siws hwsy1cff b7h9ocf4 p361ku9c jnigpg78 odw8uiq3"><g fill-rule="evenodd" transform="translate(-446 -350)"><g fill-rule="nonzero"><path d="M95 201.5h13a1 1 0 1 0 0-2H95a1 1 0 1 0 0 2z" transform="translate(354.5 159.5)"></path><path d="M102.5 207v-13a1 1 0 1 0-2 0v13a1 1 0 1 0 2 0z" transform="translate(354.5 159.5)"></path></g></g></svg></button>
-                </div>
-                <div class="card-body">
-                  <p class="card-text mt-2">Promoção Relampago!</p>
-                </div>
-              </div>
-              <!-- STORY -->
-              <div class="img-card-story imagem-fundo card ml-2" style="background-image: url('imgs/promo_1.webp');">
-                <div class="img-card">
-                  <div class="perfil-story imagem-fundo" style="background-image: url('imgs/Homem_1.jpg');"></div>
-                </div>
-                <div class="card-body nome-story">  
-            
-                </div>
-              </div>
-              <!-- STORY -->
-
-              <!-- STORY -->
-              <div class="img-card-story imagem-fundo card ml-2" style="background-image: url('imgs/promo_2.webp');">
-                <div class="img-card">
-                  <div class="perfil-story imagem-fundo" style="background-image: url('imgs/Mulher_3.webp');"></div>
-                </div>
-                <div class="card-body nome-story">  
-                  
-                </div>
-              </div>
-              <!-- STORY -->
-
-              <!-- STORY -->
-              <div class="img-card-story imagem-fundo card ml-2" style="background-image: url('imgs/promo_3.jpg');">
-                <div class="img-card">
-                  <div class="perfil-story imagem-fundo" style="background-image: url('imgs/Homem_3.webp');"></div>
-                </div>
-                <div class="card-body nome-story">  
-        
-                </div>
-              </div>
-              <!-- STORY -->
-
-               <!-- STORY -->
-               <div class="img-card-story imagem-fundo card ml-2" style="background-image: url('imgs/promo_4.webp');">
-                <div class="img-card">
-                  <div class="perfil-story imagem-fundo" style="background-image: url('imgs/Mulher_1.webp');"></div>
-                </div>
-                <div class="card-body nome-story">  
-        
-                </div>
-              </div>
-              <!-- STORY -->
-            </div>
+      <div class="card-group d-none d-sm-flex">
+        <div class="card">
+          <div class="img-card" style="background-image: url('');">
+            <button class="criar-story"><svg viewBox="0 0 20 20" width="1em" height="1em"
+                class="a8c37x1j ms05siws hwsy1cff b7h9ocf4 p361ku9c jnigpg78 odw8uiq3">
+                <g fill-rule="evenodd" transform="translate(-446 -350)">
+                  <g fill-rule="nonzero">
+                    <path d="M95 201.5h13a1 1 0 1 0 0-2H95a1 1 0 1 0 0 2z" transform="translate(354.5 159.5)"></path>
+                    <path d="M102.5 207v-13a1 1 0 1 0-2 0v13a1 1 0 1 0 2 0z" transform="translate(354.5 159.5)"></path>
+                  </g>
+                </g>
+              </svg></button>
+          </div>
+          <div class="card-body">
+            <p class="card-text mt-2">Promoção Relampago!</p>
+          </div>
+        </div>
+        <!-- STORY -->
+        <div class="img-card-story imagem-fundo card ml-2" style="background-image: url('imgs/promo_1.webp');">
+          <div class="img-card">
+            <div class="perfil-story imagem-fundo" style="background-image: url('imgs/Homem_1.jpg');"></div>
+          </div>
+          <div class="card-body nome-story">
 
           </div>
+        </div>
+        <!-- STORY -->
 
-            <!-- DIV PARA PUBLICAR -->
-            <div class="conteudo-central">
-              <div class="div-publicar">
-                <img class="img-conta-publicar" src="imgs/user.jpeg"><input type="search" dir="ltr" aria-autocomplete="list" aria-expanded="false" aria-label="No que você está pensando, João?" role="combobox" placeholder="Alguma novidade para negociar? Publique!" autocomplete="off" spellcheck="false" aria-invalid="false" value="" class="input-pensamento">
-              <div class="botoes-publicar mt-2">
-                <!--LINHA-->
-                
-                <div class="div-botao-publicar link-publicar">
-                  <svg style="fill:#45bd62;" viewBox="0 0 24 24" width="1em" height="1em" class="icone-publicar"><g fill-rule="evenodd" transform="translate(-444 -156)"><g><path d="m96.968 22.425-.648.057a2.692 2.692 0 0 1-1.978-.625 2.69 2.69 0 0 1-.96-1.84L92.01 4.32a2.702 2.702 0 0 1 .79-2.156c.47-.472 1.111-.731 1.774-.79l2.58-.225a.498.498 0 0 1 .507.675 4.189 4.189 0 0 0-.251 1.11L96.017 18.85a4.206 4.206 0 0 0 .977 3.091s.459.364-.026.485m8.524-16.327a1.75 1.75 0 1 1-3.485.305 1.75 1.75 0 0 1 3.485-.305m5.85 3.011a.797.797 0 0 0-1.129-.093l-3.733 3.195a.545.545 0 0 0-.062.765l.837.993a.75.75 0 1 1-1.147.966l-2.502-2.981a.797.797 0 0 0-1.096-.12L99 14.5l-.5 4.25c-.06.674.326 2.19 1 2.25l11.916 1.166c.325.026 1-.039 1.25-.25.252-.21.89-.842.917-1.166l.833-8.084-3.073-3.557z" transform="translate(352 156.5)"></path><path fill-rule="nonzero" d="m111.61 22.963-11.604-1.015a2.77 2.77 0 0 1-2.512-2.995L98.88 3.09A2.77 2.77 0 0 1 101.876.58l11.603 1.015a2.77 2.77 0 0 1 2.513 2.994l-1.388 15.862a2.77 2.77 0 0 1-2.994 2.513zm.13-1.494.082.004a1.27 1.27 0 0 0 1.287-1.154l1.388-15.862a1.27 1.27 0 0 0-1.148-1.37l-11.604-1.014a1.27 1.27 0 0 0-1.37 1.15l-1.387 15.86a1.27 1.27 0 0 0 1.149 1.37l11.603 1.016z" transform="translate(352 156.5)"></path></g></g></svg>Fotos                 
-                </div>
-                
-              </div>
-            </div>
-            <!-- DIV PARA PUBLICAR -->
+        <!-- STORY -->
+        <div class="img-card-story imagem-fundo card ml-2" style="background-image: url('imgs/promo_2.webp');">
+          <div class="img-card">
+            <div class="perfil-story imagem-fundo" style="background-image: url('imgs/Mulher_3.webp');"></div>
+          </div>
+          <div class="card-body nome-story">
 
+          </div>
+        </div>
+        <!-- STORY -->
 
-            <!-- PUBLICAÇÃO -->
-            <div class="div-publicacao">
-              <div class="menu-publicacao"><!-- MENU DIREIRO DA PUBLICACAO-->
-                <svg viewBox="0 0 20 20" width="20" height="20" class="logo-menu-publicacao"><g fill-rule="evenodd" transform="translate(-446 -350)"><path d="M458 360a2 2 0 1 1-4 0 2 2 0 0 1 4 0m6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0m-12 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0"></path></g></svg>
-              </div>
-              <div class="conta-publicacao"><!--FOTO DE PERFIL, NOME E DATA-->
-                <h6><img class="alinhar-conteudo-publicacao img-conta-publicacao mr-2" align="left" src="imgs/Homem_3.webp"><span class="nome-publicacao">Eduardo</span><span class="text-muted text-data-publicacao"><br/>6 Horas <svg viewBox="0 0 16 16" width="1em" height="1em" class="logo-publico" title="Compartilhado com Público"><title>Compartilhado com Público</title><g fill-rule="evenodd" transform="translate(-448 -544)"><g><path d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434" transform="translate(354 143.5)"></path><path d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096" transform="translate(354 143.5)"></path><path fill-rule="nonzero" d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z" transform="translate(354 143.5)"></path></g></g></svg></span></h6>
-              </div>
-              <div class="div-texto-publicacao alinhar-conteudo-publicacao"><!--TEXTO DA PUBLICACAO-->
-                <p>ATENÇÃO!!! 18 Figurinhas Brilhantes! <br> Preço - R$100,00 (Aberto a Negociações)</p>
-              </div>
-              <div class="img-publicacao"><!--IMAGEM DA PUBLICACAO-->
-                <img class="img-publicacao" src="imgs/pub_1.webp">
-              </div>
-              <div clas="total-curtidas" style="display: flex; margin-top: 10px;"><!--TOTAL DE CURTIDAS, COMENTARIOS E COMPARTILHAMENTO-->
-                <div class="curtidas">
-                  <!--curti--><img class="imagem-antes-reacao" height="18" margin-left="10" src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 16 16'%3e%3cdefs%3e%3clinearGradient id='a' x1='50%25' x2='50%25' y1='0%25' y2='100%25'%3e%3cstop offset='0%25' stop-color='%2318AFFF'/%3e%3cstop offset='100%25' stop-color='%230062DF'/%3e%3c/linearGradient%3e%3cfilter id='c' width='118.8%25' height='118.8%25' x='-9.4%25' y='-9.4%25' filterUnits='objectBoundingBox'%3e%3cfeGaussianBlur in='SourceAlpha' result='shadowBlurInner1' stdDeviation='1'/%3e%3cfeOffset dy='-1' in='shadowBlurInner1' result='shadowOffsetInner1'/%3e%3cfeComposite in='shadowOffsetInner1' in2='SourceAlpha' k2='-1' k3='1' operator='arithmetic' result='shadowInnerInner1'/%3e%3cfeColorMatrix in='shadowInnerInner1' values='0 0 0 0 0 0 0 0 0 0.299356041 0 0 0 0 0.681187726 0 0 0 0.3495684 0'/%3e%3c/filter%3e%3cpath id='b' d='M8 0a8 8 0 00-8 8 8 8 0 1016 0 8 8 0 00-8-8z'/%3e%3c/defs%3e%3cg fill='none'%3e%3cuse fill='url(%23a)' xlink:href='%23b'/%3e%3cuse fill='black' filter='url(%23c)' xlink:href='%23b'/%3e%3cpath fill='white' d='M12.162 7.338c.176.123.338.245.338.674 0 .43-.229.604-.474.725a.73.73 0 01.089.546c-.077.344-.392.611-.672.69.121.194.159.385.015.62-.185.295-.346.407-1.058.407H7.5c-.988 0-1.5-.546-1.5-1V7.665c0-1.23 1.467-2.275 1.467-3.13L7.361 3.47c-.005-.065.008-.224.058-.27.08-.079.301-.2.635-.2.218 0 .363.041.534.123.581.277.732.978.732 1.542 0 .271-.414 1.083-.47 1.364 0 0 .867-.192 1.879-.199 1.061-.006 1.749.19 1.749.842 0 .261-.219.523-.316.666zM3.6 7h.8a.6.6 0 01.6.6v3.8a.6.6 0 01-.6.6h-.8a.6.6 0 01-.6-.6V7.6a.6.6 0 01.6-.6z'/%3e%3c/g%3e%3c/svg%3e" width="18" style="margin-left:5px;">
-                  
-                  <span class="text-muted link-reacao" style="margin-left:8px;" >10 Likes</span>
-                </div>
-                <div class="reacao-direita ml-auto">
-                  <div class="comentarios">
-                    <span class="text-muted mr-3 link-reacao" >1 comentarios</span>
-                    <span class="text-muted link-reacao" style="margin-left: 3px">1 Salvos</span>
+        <!-- STORY -->
+        <div class="img-card-story imagem-fundo card ml-2" style="background-image: url('imgs/promo_3.jpg');">
+          <div class="img-card">
+            <div class="perfil-story imagem-fundo" style="background-image: url('imgs/Homem_3.webp');"></div>
+          </div>
+          <div class="card-body nome-story">
+
+          </div>
+        </div>
+        <!-- STORY -->
+
+        <!-- STORY -->
+        <div class="img-card-story imagem-fundo card ml-2" style="background-image: url('imgs/promo_4.webp');">
+          <div class="img-card">
+            <div class="perfil-story imagem-fundo" style="background-image: url('imgs/Mulher_1.webp');"></div>
+          </div>
+          <div class="card-body nome-story">
+
+          </div>
+        </div>
+        <!-- STORY -->
+      </div>
+
+    </div>
+
+    <!-- DIV PARA PUBLICAR -->
+    <div class="conteudo-central">
+      <div class="div-publicar">
+        <img class="img-conta-publicar" src="imgs/user.jpeg"><input type="search" dir="ltr" aria-autocomplete="list"
+          aria-expanded="false" aria-label="No que você está pensando, João?" role="combobox"
+          placeholder="Alguma novidade para negociar? Publique!" autocomplete="off" spellcheck="false"
+          aria-invalid="false" value="" class="input-pensamento">
+        <div class="botoes-publicar mt-2">
+          <!--LINHA-->
+
+          <div class="div-botao-publicar link-publicar">
+            <svg style="fill:#45bd62;" viewBox="0 0 24 24" width="1em" height="1em" class="icone-publicar">
+              <g fill-rule="evenodd" transform="translate(-444 -156)">
+                <g>
+                  <path
+                    d="m96.968 22.425-.648.057a2.692 2.692 0 0 1-1.978-.625 2.69 2.69 0 0 1-.96-1.84L92.01 4.32a2.702 2.702 0 0 1 .79-2.156c.47-.472 1.111-.731 1.774-.79l2.58-.225a.498.498 0 0 1 .507.675 4.189 4.189 0 0 0-.251 1.11L96.017 18.85a4.206 4.206 0 0 0 .977 3.091s.459.364-.026.485m8.524-16.327a1.75 1.75 0 1 1-3.485.305 1.75 1.75 0 0 1 3.485-.305m5.85 3.011a.797.797 0 0 0-1.129-.093l-3.733 3.195a.545.545 0 0 0-.062.765l.837.993a.75.75 0 1 1-1.147.966l-2.502-2.981a.797.797 0 0 0-1.096-.12L99 14.5l-.5 4.25c-.06.674.326 2.19 1 2.25l11.916 1.166c.325.026 1-.039 1.25-.25.252-.21.89-.842.917-1.166l.833-8.084-3.073-3.557z"
+                    transform="translate(352 156.5)"></path>
+                  <path fill-rule="nonzero"
+                    d="m111.61 22.963-11.604-1.015a2.77 2.77 0 0 1-2.512-2.995L98.88 3.09A2.77 2.77 0 0 1 101.876.58l11.603 1.015a2.77 2.77 0 0 1 2.513 2.994l-1.388 15.862a2.77 2.77 0 0 1-2.994 2.513zm.13-1.494.082.004a1.27 1.27 0 0 0 1.287-1.154l1.388-15.862a1.27 1.27 0 0 0-1.148-1.37l-11.604-1.014a1.27 1.27 0 0 0-1.37 1.15l-1.387 15.86a1.27 1.27 0 0 0 1.149 1.37l11.603 1.016z"
+                    transform="translate(352 156.5)"></path>
+                </g>
+              </g>
+            </svg>
+            <button type="button" class="btn btn-primary modalTrigger" data-toggle="modal" data-target="#exampleModal">Publicar Oferta</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="indicator"></div>
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="media mb-3">
+                      <img src="https://cdn.icon-icons.com/icons2/933/PNG/512/round-add-button_icon-icons.com_72595.png">
+                      <div class="media-body">
+                        <textarea class="autosize" placeholder="Descrição" rows="1" id="note" data-emoji="true"></textarea>
+                        <div class="position-relative">
+                          <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row col-md-12 ml-auto mr-auto preview"></div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Fechar</button>
+                    <span class="btn btn-info btn-sm" disabled>Publicar</span>
                   </div>
                 </div>
-            </div><!--CURTIR COMENTAR E COMPARTILHAR-->
-              <div clas="div-comentar" style="display: flex; justify-content: space-around; border-top: 1px solid #e4e6eb; border-bottom: 1px solid #e4e6eb; margin-top: 12px; padding: 2px 0 2px 0;">
-               <div class="curtir">
-                <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -222px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block; -webkit-filter: #65676b!important;"></i> Curtir
-               </div>
-               <div class="comentar">
-                <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -184px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i> Comentar
-              </div>
-              <div class="compartilhar">
-                <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -241px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i> Salvar
-              </div>
               </div>
             </div>
-            <!-- PUBLICAÇÃO -->
+          </div>
+        </div>
+      </div>
+      <!-- DIV PARA PUBLICAR -->
 
-            <!-- PUBLICAÇÃO -->
-            <div class="div-publicacao">
-              <div class="menu-publicacao"><!-- MENU DIREIRO DA PUBLICACAO-->
-                <svg viewBox="0 0 20 20" width="20" height="20" class="logo-menu-publicacao"><g fill-rule="evenodd" transform="translate(-446 -350)"><path d="M458 360a2 2 0 1 1-4 0 2 2 0 0 1 4 0m6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0m-12 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0"></path></g></svg>
-              </div>
-              <div class="conta-publicacao"><!--FOTO DE PERFIL, NOME E DATA-->
-                <h6><img class="alinhar-conteudo-publicacao img-conta-publicacao mr-2" align="left" src="imgs/Mulher_2.webp"><span class="nome-publicacao">Maria Eduarda</span><span class="text-muted text-data-publicacao"><br/>10 horas <svg viewBox="0 0 16 16" width="1em" height="1em" class="logo-publico" title="Compartilhado com Público"><title>Compartilhado com Público</title><g fill-rule="evenodd" transform="translate(-448 -544)"><g><path d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434" transform="translate(354 143.5)"></path><path d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096" transform="translate(354 143.5)"></path><path fill-rule="nonzero" d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z" transform="translate(354 143.5)"></path></g></g></svg></span></h6>
-              </div>
-              <div class="div-texto-publicacao alinhar-conteudo-publicacao"><!--TEXTO DA PUBLICACAO-->
-                <p>Figurinha à venda <br> Diego Godín - Uruguai <br> Preço : R$7,00 </p>
-              </div>
-              <div class="img-publicacao"><!--IMAGEM DA PUBLICACAO-->
-                <img class="img-publicacao" src="imgs/pub_2.webp">
-              </div>
-              <div clas="total-curtidas" style="display: flex; margin-top: 10px;"><!--TOTAL DE CURTIDAS, COMENTARIOS E COMPARTILHAMENTO-->
-                <div class="curtidas">
-                  <!--curti--><img class="imagem-antes-reacao" height="18" src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 16 16'%3e%3cdefs%3e%3clinearGradient id='a' x1='50%25' x2='50%25' y1='0%25' y2='100%25'%3e%3cstop offset='0%25' stop-color='%2318AFFF'/%3e%3cstop offset='100%25' stop-color='%230062DF'/%3e%3c/linearGradient%3e%3cfilter id='c' width='118.8%25' height='118.8%25' x='-9.4%25' y='-9.4%25' filterUnits='objectBoundingBox'%3e%3cfeGaussianBlur in='SourceAlpha' result='shadowBlurInner1' stdDeviation='1'/%3e%3cfeOffset dy='-1' in='shadowBlurInner1' result='shadowOffsetInner1'/%3e%3cfeComposite in='shadowOffsetInner1' in2='SourceAlpha' k2='-1' k3='1' operator='arithmetic' result='shadowInnerInner1'/%3e%3cfeColorMatrix in='shadowInnerInner1' values='0 0 0 0 0 0 0 0 0 0.299356041 0 0 0 0 0.681187726 0 0 0 0.3495684 0'/%3e%3c/filter%3e%3cpath id='b' d='M8 0a8 8 0 00-8 8 8 8 0 1016 0 8 8 0 00-8-8z'/%3e%3c/defs%3e%3cg fill='none'%3e%3cuse fill='url(%23a)' xlink:href='%23b'/%3e%3cuse fill='black' filter='url(%23c)' xlink:href='%23b'/%3e%3cpath fill='white' d='M12.162 7.338c.176.123.338.245.338.674 0 .43-.229.604-.474.725a.73.73 0 01.089.546c-.077.344-.392.611-.672.69.121.194.159.385.015.62-.185.295-.346.407-1.058.407H7.5c-.988 0-1.5-.546-1.5-1V7.665c0-1.23 1.467-2.275 1.467-3.13L7.361 3.47c-.005-.065.008-.224.058-.27.08-.079.301-.2.635-.2.218 0 .363.041.534.123.581.277.732.978.732 1.542 0 .271-.414 1.083-.47 1.364 0 0 .867-.192 1.879-.199 1.061-.006 1.749.19 1.749.842 0 .261-.219.523-.316.666zM3.6 7h.8a.6.6 0 01.6.6v3.8a.6.6 0 01-.6.6h-.8a.6.6 0 01-.6-.6V7.6a.6.6 0 01.6-.6z'/%3e%3c/g%3e%3c/svg%3e" width="18" style="margin-left:5px;">
-                  <span class="text-muted link-reacao" style="margin-left:8px;" >2 Likes</span>
-                </div>
-                <div class="reacao-direita ml-auto">
-                  <div class="comentarios">
-                    <span class="text-muted mr-3 link-reacao">0 comentários</span>
-                    <span class="text-muted link-reacao">0 Salvos </span>
-                  </div>
-                </div>
-            </div><!--CURTIR COMENTAR E COMPARTILHAR-->
-              <div clas="div-comentar" style="display: flex; justify-content: space-around; border-top: 1px solid #e4e6eb; border-bottom: 1px solid #e4e6eb; margin-top: 12px; padding: 2px 0 2px 0;">
-               <div class="curtir">
-                <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -222px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block; -webkit-filter: #65676b!important;"></i> Curtir
-               </div>
-               <div class="comentar">
-                <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -184px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i> Comentar
-              </div>
-              <div class="compartilhar">
-                <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -241px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i> Salvar
-              </div>
-              </div>
+
+      <!-- PUBLICAÇÃO -->
+      <div class="div-publicacao">
+        <div class="menu-publicacao">
+          <!-- MENU DIREIRO DA PUBLICACAO-->
+          <svg viewBox="0 0 20 20" width="20" height="20" class="logo-menu-publicacao">
+            <g fill-rule="evenodd" transform="translate(-446 -350)">
+              <path
+                d="M458 360a2 2 0 1 1-4 0 2 2 0 0 1 4 0m6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0m-12 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0">
+              </path>
+            </g>
+          </svg>
+        </div>
+        <div class="conta-publicacao">
+          <!--FOTO DE PERFIL, NOME E DATA-->
+          <h6><img class="alinhar-conteudo-publicacao img-conta-publicacao mr-2" align="left"
+              src="imgs/Homem_3.webp"><span class="nome-publicacao">Eduardo</span><span
+              class="text-muted text-data-publicacao"><br />6 Horas <svg viewBox="0 0 16 16" width="1em" height="1em"
+                class="logo-publico" title="Compartilhado com Público">
+                <title>Compartilhado com Público</title>
+                <g fill-rule="evenodd" transform="translate(-448 -544)">
+                  <g>
+                    <path
+                      d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434"
+                      transform="translate(354 143.5)"></path>
+                    <path
+                      d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096"
+                      transform="translate(354 143.5)"></path>
+                    <path fill-rule="nonzero"
+                      d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"
+                      transform="translate(354 143.5)"></path>
+                  </g>
+                </g>
+              </svg></span></h6>
+        </div>
+        <div class="div-texto-publicacao alinhar-conteudo-publicacao">
+          <!--TEXTO DA PUBLICACAO-->
+          <p>ATENÇÃO!!! 18 Figurinhas Brilhantes! <br> Preço - R$100,00 (Aberto a Negociações)</p>
+        </div>
+        <div class="img-publicacao">
+          <!--IMAGEM DA PUBLICACAO-->
+          <img class="img-publicacao" src="imgs/pub_1.webp">
+        </div>
+        <div clas="total-curtidas" style="display: flex; margin-top: 10px;">
+          <!--TOTAL DE CURTIDAS, COMENTARIOS E COMPARTILHAMENTO-->
+          <div class="curtidas">
+            <!--curti--><img class="imagem-antes-reacao" height="18" margin-left="10"
+              src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 16 16'%3e%3cdefs%3e%3clinearGradient id='a' x1='50%25' x2='50%25' y1='0%25' y2='100%25'%3e%3cstop offset='0%25' stop-color='%2318AFFF'/%3e%3cstop offset='100%25' stop-color='%230062DF'/%3e%3c/linearGradient%3e%3cfilter id='c' width='118.8%25' height='118.8%25' x='-9.4%25' y='-9.4%25' filterUnits='objectBoundingBox'%3e%3cfeGaussianBlur in='SourceAlpha' result='shadowBlurInner1' stdDeviation='1'/%3e%3cfeOffset dy='-1' in='shadowBlurInner1' result='shadowOffsetInner1'/%3e%3cfeComposite in='shadowOffsetInner1' in2='SourceAlpha' k2='-1' k3='1' operator='arithmetic' result='shadowInnerInner1'/%3e%3cfeColorMatrix in='shadowInnerInner1' values='0 0 0 0 0 0 0 0 0 0.299356041 0 0 0 0 0.681187726 0 0 0 0.3495684 0'/%3e%3c/filter%3e%3cpath id='b' d='M8 0a8 8 0 00-8 8 8 8 0 1016 0 8 8 0 00-8-8z'/%3e%3c/defs%3e%3cg fill='none'%3e%3cuse fill='url(%23a)' xlink:href='%23b'/%3e%3cuse fill='black' filter='url(%23c)' xlink:href='%23b'/%3e%3cpath fill='white' d='M12.162 7.338c.176.123.338.245.338.674 0 .43-.229.604-.474.725a.73.73 0 01.089.546c-.077.344-.392.611-.672.69.121.194.159.385.015.62-.185.295-.346.407-1.058.407H7.5c-.988 0-1.5-.546-1.5-1V7.665c0-1.23 1.467-2.275 1.467-3.13L7.361 3.47c-.005-.065.008-.224.058-.27.08-.079.301-.2.635-.2.218 0 .363.041.534.123.581.277.732.978.732 1.542 0 .271-.414 1.083-.47 1.364 0 0 .867-.192 1.879-.199 1.061-.006 1.749.19 1.749.842 0 .261-.219.523-.316.666zM3.6 7h.8a.6.6 0 01.6.6v3.8a.6.6 0 01-.6.6h-.8a.6.6 0 01-.6-.6V7.6a.6.6 0 01.6-.6z'/%3e%3c/g%3e%3c/svg%3e"
+              width="18" style="margin-left:5px;">
+
+            <span class="text-muted link-reacao" style="margin-left:8px;">10 Likes</span>
+          </div>
+          <div class="reacao-direita ml-auto">
+            <div class="comentarios">
+              <span class="text-muted mr-3 link-reacao">1 comentarios</span>
+              <span class="text-muted link-reacao" style="margin-left: 3px">1 Salvos</span>
             </div>
-            <!-- PUBLICAÇÃO -->
+          </div>
+        </div>
+        <!--CURTIR COMENTAR E COMPARTILHAR-->
+        <div clas="div-comentar"
+          style="display: flex; justify-content: space-around; border-top: 1px solid #e4e6eb; border-bottom: 1px solid #e4e6eb; margin-top: 12px; padding: 2px 0 2px 0;">
+          <div class="curtir">
+            <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps"
+              style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -222px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block; -webkit-filter: #65676b!important;"></i>
+            Curtir
+          </div>
+          <div class="comentar">
+            <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps"
+              style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -184px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i>
+            Comentar
+          </div>
+          <div class="compartilhar">
+            <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps"
+              style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -241px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i>
+            Salvar
+          </div>
+        </div>
+      </div>
+      <!-- PUBLICAÇÃO -->
 
-            <!-- PUBLICAÇÃO -->
-            <div class="div-publicacao">
-              <div class="menu-publicacao"><!-- MENU DIREIRO DA PUBLICACAO-->
-                <svg viewBox="0 0 20 20" width="20" height="20" class="logo-menu-publicacao"><g fill-rule="evenodd" transform="translate(-446 -350)"><path d="M458 360a2 2 0 1 1-4 0 2 2 0 0 1 4 0m6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0m-12 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0"></path></g></svg>
-              </div>
-              <div class="conta-publicacao"><!--FOTO DE PERFIL, NOME E DATA-->
-                <h6><img class="alinhar-conteudo-publicacao img-conta-publicacao mr-2" align="left" src="imgs/Homem_2.jpeg"><span class="nome-publicacao">Gabriel Dias</span><span class="text-muted text-data-publicacao"><br/>13 horas <svg viewBox="0 0 16 16" width="1em" height="1em" class="logo-publico" title="Compartilhado com Público"><title>Compartilhado com Público</title><g fill-rule="evenodd" transform="translate(-448 -544)"><g><path d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434" transform="translate(354 143.5)"></path><path d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096" transform="translate(354 143.5)"></path><path fill-rule="nonzero" d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z" transform="translate(354 143.5)"></path></g></g></svg></span></h6>
-              </div>
-              <div class="div-texto-publicacao alinhar-conteudo-publicacao"><!--TEXTO DA PUBLICACAO-->
-                <p>Oportunidade Única! <br> 5 Figurinhas Legends! <br> Preço: R$1000,00 (Sem negociações)</p>
-              </div>
-              <div class="img-publicacao"><!--IMAGEM DA PUBLICACAO-->
-                <img class="img-publicacao" src="imgs/pub_3.webp">
-              </div>
-              <div clas="total-curtidas" style="display: flex; margin-top: 10px;"><!--TOTAL DE CURTIDAS, COMENTARIOS E COMPARTILHAMENTO-->
-                <div class="curtidas">
-                  <!--curti--><img class="imagem-antes-reacao" height="18"  src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 16 16'%3e%3cdefs%3e%3clinearGradient id='a' x1='50%25' x2='50%25' y1='0%25' y2='100%25'%3e%3cstop offset='0%25' stop-color='%2318AFFF'/%3e%3cstop offset='100%25' stop-color='%230062DF'/%3e%3c/linearGradient%3e%3cfilter id='c' width='118.8%25' height='118.8%25' x='-9.4%25' y='-9.4%25' filterUnits='objectBoundingBox'%3e%3cfeGaussianBlur in='SourceAlpha' result='shadowBlurInner1' stdDeviation='1'/%3e%3cfeOffset dy='-1' in='shadowBlurInner1' result='shadowOffsetInner1'/%3e%3cfeComposite in='shadowOffsetInner1' in2='SourceAlpha' k2='-1' k3='1' operator='arithmetic' result='shadowInnerInner1'/%3e%3cfeColorMatrix in='shadowInnerInner1' values='0 0 0 0 0 0 0 0 0 0.299356041 0 0 0 0 0.681187726 0 0 0 0.3495684 0'/%3e%3c/filter%3e%3cpath id='b' d='M8 0a8 8 0 00-8 8 8 8 0 1016 0 8 8 0 00-8-8z'/%3e%3c/defs%3e%3cg fill='none'%3e%3cuse fill='url(%23a)' xlink:href='%23b'/%3e%3cuse fill='black' filter='url(%23c)' xlink:href='%23b'/%3e%3cpath fill='white' d='M12.162 7.338c.176.123.338.245.338.674 0 .43-.229.604-.474.725a.73.73 0 01.089.546c-.077.344-.392.611-.672.69.121.194.159.385.015.62-.185.295-.346.407-1.058.407H7.5c-.988 0-1.5-.546-1.5-1V7.665c0-1.23 1.467-2.275 1.467-3.13L7.361 3.47c-.005-.065.008-.224.058-.27.08-.079.301-.2.635-.2.218 0 .363.041.534.123.581.277.732.978.732 1.542 0 .271-.414 1.083-.47 1.364 0 0 .867-.192 1.879-.199 1.061-.006 1.749.19 1.749.842 0 .261-.219.523-.316.666zM3.6 7h.8a.6.6 0 01.6.6v3.8a.6.6 0 01-.6.6h-.8a.6.6 0 01-.6-.6V7.6a.6.6 0 01.6-.6z'/%3e%3c/g%3e%3c/svg%3e" width="18" style="margin-left:5px;">
-                  <span class="text-muted link-reacao" style="margin-left:8px;">43 Likes</span>
-                </div>
-                <div class="reacao-direita ml-auto">
-                  <div class="comentarios">
-                    <span class="text-muted mr-3 link-reacao">20 comentarios</span>
-                    <span class="text-muted link-reacao">15 Salvos</span>
-                  </div>
-                </div>
-            </div><!--CURTIR COMENTAR E COMPARTILHAR-->
-              <div clas="div-comentar" style="display: flex; justify-content: space-around; border-top: 1px solid #e4e6eb; border-bottom: 1px solid #e4e6eb; margin-top: 12px; padding: 2px 0 2px 0;">
-               <div class="curtir">
-                <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -222px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block; -webkit-filter: #65676b!important;"></i> Curtir
-               </div>
-               <div class="comentar">
-                <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -184px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i> Comentar
-              </div>
-              <div class="compartilhar">
-                <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -241px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i> Salvar
-              </div>
-              </div>
+      <!-- PUBLICAÇÃO -->
+      <div class="div-publicacao">
+        <div class="menu-publicacao">
+          <!-- MENU DIREIRO DA PUBLICACAO-->
+          <svg viewBox="0 0 20 20" width="20" height="20" class="logo-menu-publicacao">
+            <g fill-rule="evenodd" transform="translate(-446 -350)">
+              <path
+                d="M458 360a2 2 0 1 1-4 0 2 2 0 0 1 4 0m6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0m-12 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0">
+              </path>
+            </g>
+          </svg>
+        </div>
+        <div class="conta-publicacao">
+          <!--FOTO DE PERFIL, NOME E DATA-->
+          <h6><img class="alinhar-conteudo-publicacao img-conta-publicacao mr-2" align="left"
+              src="imgs/Mulher_2.webp"><span class="nome-publicacao">Maria Eduarda</span><span
+              class="text-muted text-data-publicacao"><br />10 horas <svg viewBox="0 0 16 16" width="1em" height="1em"
+                class="logo-publico" title="Compartilhado com Público">
+                <title>Compartilhado com Público</title>
+                <g fill-rule="evenodd" transform="translate(-448 -544)">
+                  <g>
+                    <path
+                      d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434"
+                      transform="translate(354 143.5)"></path>
+                    <path
+                      d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096"
+                      transform="translate(354 143.5)"></path>
+                    <path fill-rule="nonzero"
+                      d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"
+                      transform="translate(354 143.5)"></path>
+                  </g>
+                </g>
+              </svg></span></h6>
+        </div>
+        <div class="div-texto-publicacao alinhar-conteudo-publicacao">
+          <!--TEXTO DA PUBLICACAO-->
+          <p>Figurinha à venda <br> Diego Godín - Uruguai <br> Preço : R$7,00 </p>
+        </div>
+        <div class="img-publicacao">
+          <!--IMAGEM DA PUBLICACAO-->
+          <img class="img-publicacao" src="imgs/pub_2.webp">
+        </div>
+        <div clas="total-curtidas" style="display: flex; margin-top: 10px;">
+          <!--TOTAL DE CURTIDAS, COMENTARIOS E COMPARTILHAMENTO-->
+          <div class="curtidas">
+            <!--curti--><img class="imagem-antes-reacao" height="18"
+              src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 16 16'%3e%3cdefs%3e%3clinearGradient id='a' x1='50%25' x2='50%25' y1='0%25' y2='100%25'%3e%3cstop offset='0%25' stop-color='%2318AFFF'/%3e%3cstop offset='100%25' stop-color='%230062DF'/%3e%3c/linearGradient%3e%3cfilter id='c' width='118.8%25' height='118.8%25' x='-9.4%25' y='-9.4%25' filterUnits='objectBoundingBox'%3e%3cfeGaussianBlur in='SourceAlpha' result='shadowBlurInner1' stdDeviation='1'/%3e%3cfeOffset dy='-1' in='shadowBlurInner1' result='shadowOffsetInner1'/%3e%3cfeComposite in='shadowOffsetInner1' in2='SourceAlpha' k2='-1' k3='1' operator='arithmetic' result='shadowInnerInner1'/%3e%3cfeColorMatrix in='shadowInnerInner1' values='0 0 0 0 0 0 0 0 0 0.299356041 0 0 0 0 0.681187726 0 0 0 0.3495684 0'/%3e%3c/filter%3e%3cpath id='b' d='M8 0a8 8 0 00-8 8 8 8 0 1016 0 8 8 0 00-8-8z'/%3e%3c/defs%3e%3cg fill='none'%3e%3cuse fill='url(%23a)' xlink:href='%23b'/%3e%3cuse fill='black' filter='url(%23c)' xlink:href='%23b'/%3e%3cpath fill='white' d='M12.162 7.338c.176.123.338.245.338.674 0 .43-.229.604-.474.725a.73.73 0 01.089.546c-.077.344-.392.611-.672.69.121.194.159.385.015.62-.185.295-.346.407-1.058.407H7.5c-.988 0-1.5-.546-1.5-1V7.665c0-1.23 1.467-2.275 1.467-3.13L7.361 3.47c-.005-.065.008-.224.058-.27.08-.079.301-.2.635-.2.218 0 .363.041.534.123.581.277.732.978.732 1.542 0 .271-.414 1.083-.47 1.364 0 0 .867-.192 1.879-.199 1.061-.006 1.749.19 1.749.842 0 .261-.219.523-.316.666zM3.6 7h.8a.6.6 0 01.6.6v3.8a.6.6 0 01-.6.6h-.8a.6.6 0 01-.6-.6V7.6a.6.6 0 01.6-.6z'/%3e%3c/g%3e%3c/svg%3e"
+              width="18" style="margin-left:5px;">
+            <span class="text-muted link-reacao" style="margin-left:8px;">2 Likes</span>
+          </div>
+          <div class="reacao-direita ml-auto">
+            <div class="comentarios">
+              <span class="text-muted mr-3 link-reacao">0 comentários</span>
+              <span class="text-muted link-reacao">0 Salvos </span>
             </div>
-            <!-- PUBLICAÇÃO -->
+          </div>
+        </div>
+        <!--CURTIR COMENTAR E COMPARTILHAR-->
+        <div clas="div-comentar"
+          style="display: flex; justify-content: space-around; border-top: 1px solid #e4e6eb; border-bottom: 1px solid #e4e6eb; margin-top: 12px; padding: 2px 0 2px 0;">
+          <div class="curtir">
+            <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps"
+              style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -222px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block; -webkit-filter: #65676b!important;"></i>
+            Curtir
+          </div>
+          <div class="comentar">
+            <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps"
+              style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -184px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i>
+            Comentar
+          </div>
+          <div class="compartilhar">
+            <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps"
+              style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -241px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i>
+            Salvar
+          </div>
+        </div>
+      </div>
+      <!-- PUBLICAÇÃO -->
 
-            <!-- PUBLICAÇÃO -->
-            <div class="div-publicacao">
-              <div class="menu-publicacao"><!-- MENU DIREIRO DA PUBLICACAO-->
-                <svg viewBox="0 0 20 20" width="20" height="20" class="logo-menu-publicacao"><g fill-rule="evenodd" transform="translate(-446 -350)"><path d="M458 360a2 2 0 1 1-4 0 2 2 0 0 1 4 0m6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0m-12 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0"></path></g></svg>
-              </div>
-              <div class="conta-publicacao"><!--FOTO DE PERFIL, NOME E DATA-->
-                <h6><img class="alinhar-conteudo-publicacao img-conta-publicacao mr-2" align="left" src="imgs/user.jpeg"><span class="nome-publicacao">Isabella Sanches</span><span class="text-muted text-data-publicacao"><br/>1 dia <svg viewBox="0 0 16 16" width="1em" height="1em" class="logo-publico" title="Compartilhado com Público"><title>Compartilhado com Público</title><g fill-rule="evenodd" transform="translate(-448 -544)"><g><path d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434" transform="translate(354 143.5)"></path><path d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096" transform="translate(354 143.5)"></path><path fill-rule="nonzero" d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z" transform="translate(354 143.5)"></path></g></g></svg></span></h6>
-              </div>
-              <div class="div-texto-publicacao alinhar-conteudo-publicacao"><!--TEXTO DA PUBLICACAO-->
-                <p>Nova Figurinha! <br>Kylian Mbappe - França <br> Preço: R$12,00</p>
-                <div class="img-publicacao"><!--IMAGEM DA PUBLICACAO-->
-                    <img class="img-publicacao" src="imgs/mbappe.png">
-                  </div>
-              </div>
-              <div clas="total-curtidas" style="display: flex; margin-top: 10px;"><!--TOTAL DE CURTIDAS, COMENTARIOS E COMPARTILHAMENTO-->
-                <div class="curtidas">
-                  <!--curti--><img class="imagem-antes-reacao" height="18" src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 16 16'%3e%3cdefs%3e%3clinearGradient id='a' x1='50%25' x2='50%25' y1='0%25' y2='100%25'%3e%3cstop offset='0%25' stop-color='%2318AFFF'/%3e%3cstop offset='100%25' stop-color='%230062DF'/%3e%3c/linearGradient%3e%3cfilter id='c' width='118.8%25' height='118.8%25' x='-9.4%25' y='-9.4%25' filterUnits='objectBoundingBox'%3e%3cfeGaussianBlur in='SourceAlpha' result='shadowBlurInner1' stdDeviation='1'/%3e%3cfeOffset dy='-1' in='shadowBlurInner1' result='shadowOffsetInner1'/%3e%3cfeComposite in='shadowOffsetInner1' in2='SourceAlpha' k2='-1' k3='1' operator='arithmetic' result='shadowInnerInner1'/%3e%3cfeColorMatrix in='shadowInnerInner1' values='0 0 0 0 0 0 0 0 0 0.299356041 0 0 0 0 0.681187726 0 0 0 0.3495684 0'/%3e%3c/filter%3e%3cpath id='b' d='M8 0a8 8 0 00-8 8 8 8 0 1016 0 8 8 0 00-8-8z'/%3e%3c/defs%3e%3cg fill='none'%3e%3cuse fill='url(%23a)' xlink:href='%23b'/%3e%3cuse fill='black' filter='url(%23c)' xlink:href='%23b'/%3e%3cpath fill='white' d='M12.162 7.338c.176.123.338.245.338.674 0 .43-.229.604-.474.725a.73.73 0 01.089.546c-.077.344-.392.611-.672.69.121.194.159.385.015.62-.185.295-.346.407-1.058.407H7.5c-.988 0-1.5-.546-1.5-1V7.665c0-1.23 1.467-2.275 1.467-3.13L7.361 3.47c-.005-.065.008-.224.058-.27.08-.079.301-.2.635-.2.218 0 .363.041.534.123.581.277.732.978.732 1.542 0 .271-.414 1.083-.47 1.364 0 0 .867-.192 1.879-.199 1.061-.006 1.749.19 1.749.842 0 .261-.219.523-.316.666zM3.6 7h.8a.6.6 0 01.6.6v3.8a.6.6 0 01-.6.6h-.8a.6.6 0 01-.6-.6V7.6a.6.6 0 01.6-.6z'/%3e%3c/g%3e%3c/svg%3e" width="18" style="margin-left:5px;">
-                  <span class="text-muted link-reacao" style="margin-left:8px;">15 Likes</span>
-                </div>
-                <div class="reacao-direita ml-auto">
-                  <div class="comentarios">
-                    <span class="text-muted mr-3 link-reacao">4 comentarios</span>
-                    <span class="text-muted link-reacao">7 Salvos</span>
-                  </div>
-                </div>
-            </div><!--CURTIR COMENTAR E COMPARTILHAR-->
-              <div clas="div-comentar" style="display: flex; justify-content: space-around; border-top: 1px solid #e4e6eb; border-bottom: 1px solid #e4e6eb; margin-top: 12px; padding: 2px 0 2px 0;">
-               <div class="curtir">
-                <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -222px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block; -webkit-filter: #65676b!important;"></i> Curtir
-               </div>
-               <div class="comentar">
-                <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -184px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i> Comentar
-              </div>
-              <div class="compartilhar">
-                <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -241px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i> Salvar
-              </div>
-              </div>
+      <!-- PUBLICAÇÃO -->
+      <div class="div-publicacao">
+        <div class="menu-publicacao">
+          <!-- MENU DIREIRO DA PUBLICACAO-->
+          <svg viewBox="0 0 20 20" width="20" height="20" class="logo-menu-publicacao">
+            <g fill-rule="evenodd" transform="translate(-446 -350)">
+              <path
+                d="M458 360a2 2 0 1 1-4 0 2 2 0 0 1 4 0m6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0m-12 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0">
+              </path>
+            </g>
+          </svg>
+        </div>
+        <div class="conta-publicacao">
+          <!--FOTO DE PERFIL, NOME E DATA-->
+          <h6><img class="alinhar-conteudo-publicacao img-conta-publicacao mr-2" align="left"
+              src="imgs/Homem_2.jpeg"><span class="nome-publicacao">Gabriel Dias</span><span
+              class="text-muted text-data-publicacao"><br />13 horas <svg viewBox="0 0 16 16" width="1em" height="1em"
+                class="logo-publico" title="Compartilhado com Público">
+                <title>Compartilhado com Público</title>
+                <g fill-rule="evenodd" transform="translate(-448 -544)">
+                  <g>
+                    <path
+                      d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434"
+                      transform="translate(354 143.5)"></path>
+                    <path
+                      d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096"
+                      transform="translate(354 143.5)"></path>
+                    <path fill-rule="nonzero"
+                      d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"
+                      transform="translate(354 143.5)"></path>
+                  </g>
+                </g>
+              </svg></span></h6>
+        </div>
+        <div class="div-texto-publicacao alinhar-conteudo-publicacao">
+          <!--TEXTO DA PUBLICACAO-->
+          <p>Oportunidade Única! <br> 5 Figurinhas Legends! <br> Preço: R$1000,00 (Sem negociações)</p>
+        </div>
+        <div class="img-publicacao">
+          <!--IMAGEM DA PUBLICACAO-->
+          <img class="img-publicacao" src="imgs/pub_3.webp">
+        </div>
+        <div clas="total-curtidas" style="display: flex; margin-top: 10px;">
+          <!--TOTAL DE CURTIDAS, COMENTARIOS E COMPARTILHAMENTO-->
+          <div class="curtidas">
+            <!--curti--><img class="imagem-antes-reacao" height="18"
+              src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 16 16'%3e%3cdefs%3e%3clinearGradient id='a' x1='50%25' x2='50%25' y1='0%25' y2='100%25'%3e%3cstop offset='0%25' stop-color='%2318AFFF'/%3e%3cstop offset='100%25' stop-color='%230062DF'/%3e%3c/linearGradient%3e%3cfilter id='c' width='118.8%25' height='118.8%25' x='-9.4%25' y='-9.4%25' filterUnits='objectBoundingBox'%3e%3cfeGaussianBlur in='SourceAlpha' result='shadowBlurInner1' stdDeviation='1'/%3e%3cfeOffset dy='-1' in='shadowBlurInner1' result='shadowOffsetInner1'/%3e%3cfeComposite in='shadowOffsetInner1' in2='SourceAlpha' k2='-1' k3='1' operator='arithmetic' result='shadowInnerInner1'/%3e%3cfeColorMatrix in='shadowInnerInner1' values='0 0 0 0 0 0 0 0 0 0.299356041 0 0 0 0 0.681187726 0 0 0 0.3495684 0'/%3e%3c/filter%3e%3cpath id='b' d='M8 0a8 8 0 00-8 8 8 8 0 1016 0 8 8 0 00-8-8z'/%3e%3c/defs%3e%3cg fill='none'%3e%3cuse fill='url(%23a)' xlink:href='%23b'/%3e%3cuse fill='black' filter='url(%23c)' xlink:href='%23b'/%3e%3cpath fill='white' d='M12.162 7.338c.176.123.338.245.338.674 0 .43-.229.604-.474.725a.73.73 0 01.089.546c-.077.344-.392.611-.672.69.121.194.159.385.015.62-.185.295-.346.407-1.058.407H7.5c-.988 0-1.5-.546-1.5-1V7.665c0-1.23 1.467-2.275 1.467-3.13L7.361 3.47c-.005-.065.008-.224.058-.27.08-.079.301-.2.635-.2.218 0 .363.041.534.123.581.277.732.978.732 1.542 0 .271-.414 1.083-.47 1.364 0 0 .867-.192 1.879-.199 1.061-.006 1.749.19 1.749.842 0 .261-.219.523-.316.666zM3.6 7h.8a.6.6 0 01.6.6v3.8a.6.6 0 01-.6.6h-.8a.6.6 0 01-.6-.6V7.6a.6.6 0 01.6-.6z'/%3e%3c/g%3e%3c/svg%3e"
+              width="18" style="margin-left:5px;">
+            <span class="text-muted link-reacao" style="margin-left:8px;">43 Likes</span>
+          </div>
+          <div class="reacao-direita ml-auto">
+            <div class="comentarios">
+              <span class="text-muted mr-3 link-reacao">20 comentarios</span>
+              <span class="text-muted link-reacao">15 Salvos</span>
             </div>
-            <!-- PUBLICAÇÃO -->
+          </div>
+        </div>
+        <!--CURTIR COMENTAR E COMPARTILHAR-->
+        <div clas="div-comentar"
+          style="display: flex; justify-content: space-around; border-top: 1px solid #e4e6eb; border-bottom: 1px solid #e4e6eb; margin-top: 12px; padding: 2px 0 2px 0;">
+          <div class="curtir">
+            <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps"
+              style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -222px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block; -webkit-filter: #65676b!important;"></i>
+            Curtir
+          </div>
+          <div class="comentar">
+            <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps"
+              style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -184px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i>
+            Comentar
+          </div>
+          <div class="compartilhar">
+            <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps"
+              style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -241px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i>
+            Salvar
+          </div>
+        </div>
+      </div>
+      <!-- PUBLICAÇÃO -->
 
+      <!-- PUBLICAÇÃO -->
+      <div class="div-publicacao">
+        <div class="menu-publicacao">
+          <!-- MENU DIREIRO DA PUBLICACAO-->
+          <svg viewBox="0 0 20 20" width="20" height="20" class="logo-menu-publicacao">
+            <g fill-rule="evenodd" transform="translate(-446 -350)">
+              <path
+                d="M458 360a2 2 0 1 1-4 0 2 2 0 0 1 4 0m6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0m-12 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0">
+              </path>
+            </g>
+          </svg>
+        </div>
+        <div class="conta-publicacao">
+          <!--FOTO DE PERFIL, NOME E DATA-->
+          <h6><img class="alinhar-conteudo-publicacao img-conta-publicacao mr-2" align="left" src="imgs/user.jpeg"><span
+              class="nome-publicacao">Isabella Sanches</span><span class="text-muted text-data-publicacao"><br />1 dia
+              <svg viewBox="0 0 16 16" width="1em" height="1em" class="logo-publico" title="Compartilhado com Público">
+                <title>Compartilhado com Público</title>
+                <g fill-rule="evenodd" transform="translate(-448 -544)">
+                  <g>
+                    <path
+                      d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434"
+                      transform="translate(354 143.5)"></path>
+                    <path
+                      d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096"
+                      transform="translate(354 143.5)"></path>
+                    <path fill-rule="nonzero"
+                      d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"
+                      transform="translate(354 143.5)"></path>
+                  </g>
+                </g>
+              </svg></span></h6>
+        </div>
+        <div class="div-texto-publicacao alinhar-conteudo-publicacao">
+          <!--TEXTO DA PUBLICACAO-->
+          <p>Nova Figurinha! <br>Kylian Mbappe - França <br> Preço: R$12,00</p>
+          <div class="img-publicacao">
+            <!--IMAGEM DA PUBLICACAO-->
+            <img class="img-publicacao" src="imgs/mbappe.png">
+          </div>
+        </div>
+        <div clas="total-curtidas" style="display: flex; margin-top: 10px;">
+          <!--TOTAL DE CURTIDAS, COMENTARIOS E COMPARTILHAMENTO-->
+          <div class="curtidas">
+            <!--curti--><img class="imagem-antes-reacao" height="18"
+              src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 16 16'%3e%3cdefs%3e%3clinearGradient id='a' x1='50%25' x2='50%25' y1='0%25' y2='100%25'%3e%3cstop offset='0%25' stop-color='%2318AFFF'/%3e%3cstop offset='100%25' stop-color='%230062DF'/%3e%3c/linearGradient%3e%3cfilter id='c' width='118.8%25' height='118.8%25' x='-9.4%25' y='-9.4%25' filterUnits='objectBoundingBox'%3e%3cfeGaussianBlur in='SourceAlpha' result='shadowBlurInner1' stdDeviation='1'/%3e%3cfeOffset dy='-1' in='shadowBlurInner1' result='shadowOffsetInner1'/%3e%3cfeComposite in='shadowOffsetInner1' in2='SourceAlpha' k2='-1' k3='1' operator='arithmetic' result='shadowInnerInner1'/%3e%3cfeColorMatrix in='shadowInnerInner1' values='0 0 0 0 0 0 0 0 0 0.299356041 0 0 0 0 0.681187726 0 0 0 0.3495684 0'/%3e%3c/filter%3e%3cpath id='b' d='M8 0a8 8 0 00-8 8 8 8 0 1016 0 8 8 0 00-8-8z'/%3e%3c/defs%3e%3cg fill='none'%3e%3cuse fill='url(%23a)' xlink:href='%23b'/%3e%3cuse fill='black' filter='url(%23c)' xlink:href='%23b'/%3e%3cpath fill='white' d='M12.162 7.338c.176.123.338.245.338.674 0 .43-.229.604-.474.725a.73.73 0 01.089.546c-.077.344-.392.611-.672.69.121.194.159.385.015.62-.185.295-.346.407-1.058.407H7.5c-.988 0-1.5-.546-1.5-1V7.665c0-1.23 1.467-2.275 1.467-3.13L7.361 3.47c-.005-.065.008-.224.058-.27.08-.079.301-.2.635-.2.218 0 .363.041.534.123.581.277.732.978.732 1.542 0 .271-.414 1.083-.47 1.364 0 0 .867-.192 1.879-.199 1.061-.006 1.749.19 1.749.842 0 .261-.219.523-.316.666zM3.6 7h.8a.6.6 0 01.6.6v3.8a.6.6 0 01-.6.6h-.8a.6.6 0 01-.6-.6V7.6a.6.6 0 01.6-.6z'/%3e%3c/g%3e%3c/svg%3e"
+              width="18" style="margin-left:5px;">
+            <span class="text-muted link-reacao" style="margin-left:8px;">15 Likes</span>
+          </div>
+          <div class="reacao-direita ml-auto">
+            <div class="comentarios">
+              <span class="text-muted mr-3 link-reacao">4 comentarios</span>
+              <span class="text-muted link-reacao">7 Salvos</span>
+            </div>
+          </div>
+        </div>
+        <!--CURTIR COMENTAR E COMPARTILHAR-->
+        <div clas="div-comentar"
+          style="display: flex; justify-content: space-around; border-top: 1px solid #e4e6eb; border-bottom: 1px solid #e4e6eb; margin-top: 12px; padding: 2px 0 2px 0;">
+          <div class="curtir">
+            <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps"
+              style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -222px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block; -webkit-filter: #65676b!important;"></i>
+            Curtir
+          </div>
+          <div class="comentar">
+            <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps"
+              style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -184px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i>
+            Comentar
+          </div>
+          <div class="compartilhar">
+            <i data-visualcompletion="css-img" class="hu5pjgll m6k467ps"
+              style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/E2BXhjYXUP-.png?_nc_eui2=AeGjJv-PSMg1H14niQWZDIoFiHVSOZTF6ReIdVI5lMXpF_PLOQ5iqyYFcmzSUn5bi7eLd9V9a0HRV5gbufZqZR2f&quot;); background-position: 0px -241px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i>
+            Salvar
+          </div>
+        </div>
+      </div>
+    </div>
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+      <!-- PUBLICAÇÃO -->
+  <script>
 
-          </main>
-              
-<script>
-
-  //Tootip dos botões
-  $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+    //Tootip dos botões
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
   </script>
-        
-            </div>
-          
-    </body>
+
+</body>
